@@ -11,6 +11,7 @@ git:
 	for directory in $$(ls -d */); do \
 		git add $${directory}*.html; \
 		git add $${directory}*.pl; \
+		git add $${directory}*.css; \
 	done; \
         git commit -m "$$(uname -s -n) $$(date)"; \
         git push; \
