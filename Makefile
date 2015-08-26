@@ -2,7 +2,7 @@ all:
 	for texfile in *.tex; do \
 		pdflatex $${texfile} && \
 		pdflatex $${texfile} && \
-		latex2html -no_navigation $${texfile}; \
+		latex2html -no_navigation -split 0 $${texfile}; \
 	done; \
 	make mvpedrormjunior; \
 
@@ -17,6 +17,7 @@ mvpedrormjunior:
 git:
 	git add Makefile; \
 	git add *.tex; \
+	git add *.bib; \
 	git add *.html; \
 	git add *.pl; \
 	git add *.css; \
@@ -34,6 +35,8 @@ clean:
 	find . -name "*.pdf" -delete
 	find . -name "*.log" -delete
 	find . -name "*.aux" -delete
+	find . -name "*.bbl" -delete
+	find . -name "*.blg" -delete
 
 deepclean: clean
 	for directory in $$(ls -d */); do \
