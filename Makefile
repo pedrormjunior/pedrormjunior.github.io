@@ -10,6 +10,7 @@ git:
 	git add *.tex; \
 	for directory in $$(ls -d */); do \
 		git add $${directory}*.html; \
+		git add $${directory}*.pl; \
 	done; \
         git commit -m "$$(uname -s -n) $$(date)"; \
         git push; \
