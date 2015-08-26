@@ -2,11 +2,11 @@
 # Associate labels original text with physical files.
 
 
-$key = q/sec:important-material/;
+$key = q/cite_MendesJr2011/;
 $external_labels{$key} = "$URL/" . q|pedrormjunior.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/cite_MendesJr2011/;
+$key = q/sec:important-material/;
 $external_labels{$key} = "$URL/" . q|pedrormjunior.html|; 
 $noresave{$key} = "$nosave";
 

@@ -1,6 +1,8 @@
 all:
 	for texfile in *.tex; do \
 		pdflatex $${texfile} && \
+		bibtex $$(basename $${texfile} .tex) && \
+		pdflatex $${texfile} && \
 		pdflatex $${texfile} && \
 		latex2html -no_navigation -split 0 $${texfile}; \
 	done; \

@@ -2,11 +2,11 @@
 # Associate internals original text with physical files.
 
 
-$key = q/cite_MendesJr2011/;
+$key = q/sec:important-material/;
 $ref_files{$key} = "$dir".q|pedrormjunior.html|; 
 $noresave{$key} = "$nosave";
 
-$key = q/sec:important-material/;
+$key = q/cite_MendesJr2011/;
 $ref_files{$key} = "$dir".q|pedrormjunior.html|; 
 $noresave{$key} = "$nosave";
 
