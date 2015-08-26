@@ -2,7 +2,7 @@ all:
 	for texfile in *.tex; do \
 		pdflatex $${texfile} && \
 		pdflatex $${texfile} && \
-		latex2html $${texfile}; \
+		latex2html -no_navigation $${texfile}; \
 	done; \
 	make mvpedrormjunior; \
 
