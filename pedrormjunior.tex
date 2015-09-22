@@ -1,14 +1,18 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
+\usepackage[square,sort,numbers]{natbib}
 
 \title{Home Page}
 \author{Pedro Ribeiro Mendes J{\'u}nior\\University of Campinas \textemdash{} Institute of Computing}
+
+\newcommand{\mycite}[1]{\citeauthor{#1}~\cite{#1}}
 
 \begin{document}
 
 \nocite{Penatti2015}
 \nocite{Pazinato2015}
+% \nocite{MendesJr2014}
 \nocite{MendesJr2011}
 
 \maketitle
@@ -20,11 +24,11 @@ CV: \url{http://lattes.cnpq.br/4535492803722330} (in portuguese)
 \section{Important material}
 \label{sec:important-material}
 
-Algorithms of the work \cite{MendesJr2011}: \url{https://github.com/pedrormjunior/vlpl}.
+Algorithms used in the work \mycite{MendesJr2011}: \url{https://github.com/pedrormjunior/vlpl}.
 
-Datasets of the work \cite{MendesJr2011}: \url{https://github.com/pedrormjunior/vlpl/blob/master/imgs-database}.
+Datasets used in the work \mycite{MendesJr2011}: \url{https://github.com/pedrormjunior/vlpl/blob/master/imgs-database}.
 
 \bibliography{pedrormjunior}
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrtnat}
 
 \end{document}
