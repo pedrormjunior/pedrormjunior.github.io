@@ -1,7 +1,6 @@
 all:
 	for texfile in *.tex; do \
 		htlatex $${texfile} && \
-		bibtex $$(basename $${texfile} .tex) && \
 		htlatex $${texfile} && \
 		htlatex $${texfile}; \
 	done; \
