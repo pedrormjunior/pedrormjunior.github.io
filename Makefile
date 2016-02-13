@@ -1,12 +1,10 @@
 all:
 	for texfile in *.tex; do \
-		pdflatex $${texfile} && \
+		htlatex $${texfile} && \
 		bibtex $$(basename $${texfile} .tex) && \
-		pdflatex $${texfile} && \
-		pdflatex $${texfile} && \
-		latex2html -no_navigation -split 0 $${texfile}; \
+		htlatex $${texfile} && \
+		htlatex $${texfile}; \
 	done; \
-	make mvpedrormjunior; \
 
 mvpedrormjunior:
 	if [ -d pedrormjunior ]; then \
@@ -15,21 +13,6 @@ mvpedrormjunior:
 		mv pedrormjunior/*.css .; \
 		rm -r pedrormjunior/; \
 	fi; \
-
-git:
-	git add Makefile; \
-	git add *.tex; \
-	git add *.bib; \
-	git add *.html; \
-	git add *.pl; \
-	git add *.css; \
-	for directory in $$(ls -d */); do \
-		git add $${directory}*.html; \
-		git add $${directory}*.pl; \
-		git add $${directory}*.css; \
-	done; \
-        git commit -m "$$(uname -s -n) $$(date)"; \
-        git push; \
 
 clean:
 	find . -name "*~" -delete
