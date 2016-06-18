@@ -7,8 +7,7 @@
 *.dvi
 *.4ct
 *.4tc
-*.idv
-*.lg
-*.tex
 *.tmp
 *.xref
+*.idv
+*.lg

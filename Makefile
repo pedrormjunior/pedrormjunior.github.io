@@ -2,8 +2,7 @@ all:
 	for texfile in *.tex; do \
 		htlatex $${texfile} && \
 		htlatex $${texfile} && \
-		htlatex $${texfile} && \
-		cp $$(basename $${texfile} .html) index.html; \
+		htlatex $${texfile}; \
 	done; \
 
 mvpedrormjunior:
