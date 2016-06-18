@@ -4,6 +4,7 @@
 \usepackage[square,sort,numbers]{natbib}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{ifthen}
 
 \newcommand{\myurl}[1]{\href{#1}{#1}}
 
@@ -12,7 +13,20 @@
 \title{Pedro Ribeiro Mendes J{\'u}nior}
 \author{University of Campinas\\Institute of Computing}
 
+\newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
+\newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
+
 \newcommand{\mycite}[1]{\citeauthor{#1}~\cite{#1}}
+
+% #1: label
+% #2: authors
+% #3: doi
+% #4: title
+% #5: journal name
+% #6: volume
+% #7: issue
+% #8: pages
+\newcommand{\journal}[8]{\label{#1} #2, ``\href{#3}{#4}'', \emph{#5}. #6\ifnotempty{#7}{(#7)}:#8.}
 
 \begin{document}
 
@@ -39,8 +53,22 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
 \subsection*{Journal articles}
 
 \begin{enumerate}[label={[\arabic*]}]
-\item\label{ref:Pazinato2016} Pazinato, Daniel; Stein, Bernardo; de Almeida, Waldir; Werneck, Rafael; \textbf{Mendes Júnior, Pedro}; Penatti, Otávio; Torres, Ricardo; Menezes, Fabio; Rocha, Anderson (2016), ``\href{http://dx.doi.org/10.1109/JBHI.2014.2386796}{Pixel-Level Tissue Classification for Ultrasound Images}'', \emph{IEEE Journal of Biomedical and Health Informatics}. 20(1):256--267.
-\item\label{ref:Penatti2015} Penatti, Otávio; Werneck, Rafael; de Almeida, Waldir; Stein, Bernardo; Pazinato, Daniel; \textbf{Mendes Júnior, Pedro}; Torres, Ricardo; Rocha, Anderson (2015), ``\href{http://dx.doi.org/10.1016/j.compbiomed.2015.08.004}{Mid-level Image Representations for Real-time Heart View Plane Classification of Echocardiograms}'', \emph{Computers in Biology and Medicine}. 66:66--81.
+\item\journal{ref:Pazinato2016}
+  {Pazinato, Daniel; Stein, Bernardo; de Almeida, Waldir; Werneck, Rafael; \textbf{Mendes Júnior, Pedro}; Penatti, Otávio; Torres, Ricardo; Menezes, Fabio; Rocha, Anderson (2016)}
+  {http://dx.doi.org/10.1109/JBHI.2014.2386796}
+  {Pixel-Level Tissue Classification for Ultrasound Images}
+  {IEEE Journal of Biomedical and Health Informatics}
+  {20}
+  {1}
+  {256--267}
+\item\journal{ref:Penatti2015}
+  {Penatti, Otávio; Werneck, Rafael; de Almeida, Waldir; Stein, Bernardo; Pazinato, Daniel; \textbf{Mendes Júnior, Pedro}; Torres, Ricardo; Rocha, Anderson (2015)}
+  {http://dx.doi.org/10.1016/j.compbiomed.2015.08.004}
+  {Mid-level Image Representations for Real-time Heart View Plane Classification of Echocardiograms}
+  {Computers in Biology and Medicine}
+  {66}
+  {}
+  {66--81}
 \end{enumerate}
 
 \subsection*{Proceedings}
