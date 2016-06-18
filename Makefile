@@ -1,8 +1,8 @@
 all:
 	for texfile in *.tex; do \
-		htlatex $${texfile} && \
-		htlatex $${texfile} && \
-		htlatex $${texfile}; \
+		htlatex $${texfile} "xhtml,mathml,charset=utf-8" && \
+		htlatex $${texfile} "xhtml,mathml,charset=utf-8"&& \
+		htlatex $${texfile} "xhtml,mathml,charset=utf-8"; \
 	done; \
 
 mvpedrormjunior:
