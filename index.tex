@@ -5,13 +5,15 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{ifthen}
+\usepackage[acronym,nohypertypes={acronym}]{glossaries}
 
 \newcommand{\myurl}[1]{\href{#1}{#1}}
 
 \setlength\parindent{0pt}
 
 \title{Pedro Ribeiro Mendes J{\'u}nior}
-\author{University of Campinas\\Institute of Computing}
+\author{University of Campinas (UNICAMP)\\Institute of Computing (IC)}
+\date{}
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
@@ -27,20 +29,64 @@
 % #7: volume
 % #8: issue
 % #9: pages
-\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\href{#4}{#5}'', \emph{#6}. #7\ifnotempty{#8}{(#8)}:#9.}
+\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\href{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.}
+
+% #1: label
+% #2: authors
+% #3: year
+% #4: doi
+% #5: title
+% #6: conference name
+% #7: pages
+\newcommand{\proceedings}[7]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\href{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.}}
+
+% #1: label
+% #2: authors
+% #3: year
+% #4: title
+% #5: institution
+% #6: type
+% #7: number
+% #8: filing date
+\newcommand{\patent}[8]{\label{#1} #2 (#3), ``\underline{\textcolor{blue}{#4}}'', \emph{\glsfirst{#5}}. \glsfirst{#6}: #7. Filing date: #8.}
+
+% #1: label
+% #2: authors
+% #3: year
+% #4: link prefix
+% #5: arXiv number
+% #6: title
+\newcommand{\arxiv}[6]{\label{#1} #2 (#3), ``\href{#4#5}{#6}'', \emph{arXiv:#5}. \textbf{preprint}.}
+
+\newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
+\newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
+
+% Journals
+\newacronym[first={\glsentrytext{compbiomed}}]{compbiomed}{Computers in Biology and Medicine}{??}
+\newacronym[first={\glsentrytext{jbhi}}]{jbhi}{IEEE Journal of Biomedical and Health Informatics}{??}
+
+% Proceedings
+\newacronym{wuwsibgrapi}{SIBGRAPI}{WUW Workshop of Undergraduate Work -- XXIII Conference on Graphics, Patterns and Image}
+\newacronym{smc}{SMC}{IEEE Intl. Conference on Systems, Man, and Cybernetics}
+\newacronym[first={\glsentrytext{mediaeval2014}}]{mediaeval2014}{MediaEval 2014 Workshop}{??}
+\newacronym[first={\glsentrytext{mediaeval2015}}]{mediaeval2015}{MediaEval 2015 Workshop}{??}
+
+% Patent institutions
+\newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
+\newacronym{uspto}{USPTO}{United States Patent and Trademark Office}
+
+% Countries
+\newacronym[first={\glsentrytext{br}}]{br}{Brazil}{??}
+\newacronym[first={\glsentrytext{us}}]{us}{U.S. Patent}{??}
+
+% Me
+\newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J\'{u}nior}}}{??}
 
 \begin{document}
-
-\nocite{Penatti2015}
-\nocite{Pazinato2015}
-% \nocite{MendesJr2014}
-\nocite{MendesJunior2011}
 
 \maketitle
 
 CV: \myurl{http://lattes.cnpq.br/4535492803722330} (in portuguese)
-
-% For references, see the following BibTeX file: \myurl{https://github.com/pedrormjunior/pedrormjunior.github.io/blob/master/pedrormjunior.bib}
 
 \section*{Important material}
 \label{sec:important-material}
@@ -55,20 +101,39 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
 
 \begin{enumerate}[label={[\arabic*]}]
 \item\journal{ref:Pazinato2016}
-  {Pazinato, Daniel; Stein, Bernardo; de Almeida, Waldir; Werneck, Rafael; \textbf{Mendes Júnior, Pedro}; Penatti, Otávio; Torres, Ricardo; Menezes, Fabio; Rocha, Anderson}
+  {
+    \authorname{Daniel}{Pazinato}
+    \authorname{Bernardo}{Stein}
+    \authorname{Waldir}{de Almeida}
+    \authorname{Rafael}{Werneck}
+    \gls{me}
+    \authorname{Otávio}{Penatti}
+    \authorname{Ricardo}{Torres}
+    \authorname{Fabio}{Menezes}
+    \authorname[]{Anderson}{Rocha}
+  }
   {2016}
   {http://dx.doi.org/10.1109/JBHI.2014.2386796}
   {Pixel-Level Tissue Classification for Ultrasound Images}
-  {IEEE Journal of Biomedical and Health Informatics}
+  {jbhi}
   {20}
   {1}
   {256--267}
 \item\journal{ref:Penatti2015}
-  {Penatti, Otávio; Werneck, Rafael; de Almeida, Waldir; Stein, Bernardo; Pazinato, Daniel; \textbf{Mendes Júnior, Pedro}; Torres, Ricardo; Rocha, Anderson}
+  {
+    \authorname{Otávio}{Penatti}
+    \authorname{Rafael}{Werneck}
+    \authorname{Waldir}{de Almeida}
+    \authorname{Bernardo}{Stein}
+    \authorname{Daniel}{Pazinato}
+    \gls{me}
+    \authorname{Ricardo}{Torres}
+    \authorname[]{Anderson}{Rocha}
+  }
   {2015}
   {http://dx.doi.org/10.1016/j.compbiomed.2015.08.004}
   {Mid-level Image Representations for Real-time Heart View Plane Classification of Echocardiograms}
-  {Computers in Biology and Medicine}
+  {compbiomed}
   {66}
   {}
   {66--81}
@@ -77,21 +142,143 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
 \subsection*{Proceedings}
 
 \begin{enumerate}[label={[\arabic*]},resume]
-\item\label{ref:Li2015} Li, Lin; Muñoz, Javier; Almeida, Jurandy; Calumby, Rodrigo; Penatti, Otávio; Dourado, Ícaro; Nogueira, Keiller; \textbf{Mendes Júnior, Pedro}; Pereira, Luís; Pedronette, Daniel; dos Santos, Jefersson; Gonçalvez, Marcos; Torres, Ricardo (2015), ``\href{http://ceur-ws.org/Vol-1436/Paper49.pdf}{RECOD @ Placing Task of MediaEval 2015}'', In: \emph{MediaEval 2015 Workshop}. pp. 1--3.
-\item\label{ref:Li2014} Li, Lin; Penatti, Otávio; Almeida, Jurandy; Chiachia, Giovani; Calumby, Rodrigo; \textbf{Mendes Júnior, Pedro}; Pedronette, Daniel; Torres, Ricardo (2014), ``\href{http://ceur-ws.org/Vol-1263/mediaeval2014_submission_81.pdf}{Multimedia geocoding: The RECOD 2014 approach}'', In: \emph{MediaEval 2014 Workshop}. pp. 1--2.
-\item\label{ref:MendesJunior2011} \textbf{Mendes Júnior, Pedro}; Neves, José Maria; Taveres, Andrea; Menotti, David (2011), ``\href{http://dx.doi.org/10.1109/icsmc.2011.6084108}{Towards an automatic vehicle access control system: License plate location}'', In: \emph{IEEE Intl. Conference on Systems, Man, and Cybernetics (SMC)}. pp. 2916--2921.
-\item\label{ref:MendesJunior2010} \textbf{Mendes Júnior, Pedro}; Neves, José Maria; Menotti, David (2010), ``Em rumo a um sistema automático de controle de acesso de veículos automotivos: Localização de placas de identificação'', In: \emph{WUW Workshop of Undergraduate Work -- XXIII Conference on Graphics, Patterns and Image (SIBGRAPI)}.
+\item\proceedings{ref:Li2015}
+  {
+    \authorname{Lin}{Li}
+    \authorname{Javier}{Muñoz}
+    \authorname{Jurandy}{Almeida}
+    \authorname{Rodrigo}{Calumby}
+    \authorname{Otávio}{Penatti}
+    \authorname{Ícaro}{Dourado}
+    \authorname{Keiller}{Nogueira}
+    \gls{me}
+    \authorname{Luís}{Pereira}
+    \authorname{Daniel}{Pedronette}
+    \authorname{Jefersson}{dos Santos}
+    \authorname{Marcos}{Gonçalvez}
+    \authorname[]{Ricardo}{Torres}
+  }
+  {2015}
+  {http://ceur-ws.org/Vol-1436/Paper49.pdf}
+  {RECOD @ Placing Task of MediaEval 2015}
+  {mediaeval2015}
+  {1--3}
+\item\proceedings{ref:Li2014}
+  {
+    \authorname{Lin}{Li}
+    \authorname{Otávio}{Penatti}
+    \authorname{Jurandy}{Almeida}
+    \authorname{Giovani}{Chiachia}
+    \authorname{Rodrigo}{Calumby}
+    \gls{me}
+    \authorname{Daniel}{Pedronette}
+    \authorname[]{Ricardo}{Torres}
+  }
+  {2014}
+  {http://ceur-ws.org/Vol-1263/mediaeval2014_submission_81.pdf}
+  {Multimedia geocoding: The RECOD 2014 approach}
+  {mediaeval2014}
+  {1--2}
+\item\proceedings{ref:MendesJunior2011}
+  {
+    \gls{me}
+    \authorname{José Maria}{Neves}
+    \authorname{Andrea}{Taveres}
+    \authorname[]{David}{Menotti}
+  }
+  {2011}
+  {http://dx.doi.org/10.1109/icsmc.2011.6084108}
+  {Towards an automatic vehicle access control system: License plate location}
+  {smc}
+  {2916--2921}
+\item\proceedings{ref:MendesJunior2010}
+  {
+    \gls{me}
+    \authorname{José Maria}{Neves}
+    \authorname[]{David}{Menotti}
+  }
+  {2010}
+  {}
+  {Em rumo a um sistema automático de controle de acesso de veículos automotivos: Localização de placas de identificação}
+  {wuwsibgrapi}
+  {}
+\end{enumerate}
+
+\subsection*{Preprint}
+
+\begin{enumerate}[label={[\arabic*]},resume]
+\item\arxiv{ref:MendesJunior2016}
+  {
+    \gls{me}
+    \authorname{Jacques}{Wainer}
+    \authorname[]{Anderson}{Rocha}
+  }
+  {2016}
+  {https://arxiv.org/abs/}
+  {1606.03802}
+  {Specialized Support Vector Machines for open-set recognition}
 \end{enumerate}
 
 \subsection*{Patents}
 
 \begin{enumerate}[label={[\arabic*]},resume]
-\item\label{ref:MendesJunior2014a} \textbf{Mendes Júnior, Pedro}; Souza, Roberto; Werneck, Rafael; Stein, Bernardo; Pazinato, Daniel; de Almeida, Waldir; Penatti, Otávio; Torres, Ricardo; Rocha, Anderson (2014), ``Method for Multiclass Classification in Open-set Scenarios and uses thereof'', \emph{United States Patent and Trademark Office (USPTO)}. U.S. Patent: 14532580. Filing date:  11/04/2014.\\
-\item\label{ref:MendesJunior2014} \textbf{Mendes Júnior, Pedro}; Souza, Roberto; Werneck, Rafael; Stein, Bernardo; Pazinato, Daniel; de Almeida, Waldir; Penatti, Otávio; Torres, Ricardo; Rocha, Anderson (2014), ``Método para classificação multiclasse em cenários abertos e usos do mesmo'', \emph{Instituto Nacional da Propriedade Industrial (INPI)}. Brazil: BR10201402378. Filing date: 09/25/2014.\\
-\item\label{ref:Rocha2014} Rocha, Anderson; Torres, Ricardo; Penatti, Otávio; \textbf{Mendes Júnior, Pedro}; Pazinato, Daniel; de Almeida, Waldir; Werneck, Rafael; Stein, Bernardo (2014), ``Método para classificação automática de visões do coração a partir de ecocardiogramas'', \emph{Instituto Nacional da Propriedade Industrial (INPI)}. Brazil: BR10201401105. Filing date: 05/07/2014.
+\item\patent{ref:MendesJunior2014a}
+  {
+    \gls{me}
+    \authorname{Roberto}{Souza}
+    \authorname{Rafael}{Werneck}
+    \authorname{Bernardo}{Stein}
+    \authorname{Daniel}{Pazinato}
+    \authorname{Waldir}{de Almeida}
+    \authorname{Otávio}{Penatti}
+    \authorname{Ricardo}{Torres}
+    \authorname[]{Anderson}{Rocha}
+  }
+  {2014}
+  {Method for Multiclass Classification in Open-set Scenarios and uses thereof}
+  {uspto}
+  {us}
+  {14532580}
+  {11/04/2014}
+\item\patent{ref:MendesJunior2014}
+  {
+    \gls{me}
+    \authorname{Roberto}{Souza}
+    \authorname{Rafael}{Werneck}
+    \authorname{Bernardo}{Stein}
+    \authorname{Daniel}{Pazinato}
+    \authorname{Waldir}{de Almeida}
+    \authorname{Otávio}{Penatti}
+    \authorname{Ricardo}{Torres}
+    \authorname[]{Anderson}{Rocha}
+  }
+  {2014}
+  {Método para classificação multiclasse em cenários abertos e usos do mesmo}
+  {inpi}
+  {br}
+  {BR10201402378}
+  {09/25/2014}
+\item\patent{ref:Rocha2014}
+  {
+    \authorname{Anderson}{Rocha}
+    \authorname{Ricardo}{Torres}
+    \authorname{Otávio}{Penatti}
+    \gls{me}
+    \authorname{Daniel}{Pazinato}
+    \authorname{Waldir}{de Almeida}
+    \authorname{Rafael}{Werneck}
+    \authorname[]{Bernardo}{Stein}
+  }
+  {2014}
+  {Método para classificação automática de visões do coração a partir de ecocardiogramas}
+  {inpi}
+  {br}
+  {BR10201401105}
+  {05/07/2014}
 \end{enumerate}
 
-% \bibliography{pedrormjunior}
-% \bibliographystyle{unsrtnat}
+\begin{flushright}
+  \footnotesize Last updated on \today{}.
+\end{flushright}
 
 \end{document}

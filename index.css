@@ -17,8 +17,11 @@
 .cmbsy-5{font-size:50%;font-weight: bold;}
 .cmbsy-5{font-weight: bold;}
 .cmbsy-5{font-weight: bold;}
+.cmex-7{font-size:70%;}
+.cmex-7x-x-71{font-size:49%;}
 .cmr-17{font-size:170%;}
 .cmr-12{font-size:120%;}
+.cmr-8{font-size:80%;}
 .cmti-10{ font-style: italic;}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
@@ -127,5 +130,83 @@ div.author{white-space: nowrap;}
 .abstract p {margin-left:5%; margin-right:5%;}
 div.abstract {width:100%;}
 dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
+.equation-star td{text-align:center; vertical-align:middle; }
+table.equation-star { width:100%; } 
+mtd.align-odd{margin-left:2em; text-align:right;}
+mtd.align-even{margin-right:2em; text-align:left;}
+.boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
+mo.qopname + mi{margin-left:0.3em}
+mi + mo.qopname{margin-left:0.3em}
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+div.longtable{text-align:center;}
+.supertabular {text-align:center}
+#textcolor1{color:#0000FF}
+#textcolor2{color:#0000FF}
+#textcolor3{color:#0000FF}
+#textcolor4{color:#0000FF}
+#textcolor5{color:#0000FF}
+#textcolor6{color:#0000FF}
+#textcolor7{color:#0000FF}
+#textcolor8{color:#0000FF}
+#textcolor9{color:#0000FF}
+#textcolor10{color:#0000FF}
+#textcolor11{color:#0000FF}
+#textcolor12{color:#0000FF}
+#textcolor13{color:#0000FF}
+#textcolor14{color:#0000FF}
+#textcolor15{color:#0000FF}
+#textcolor16{color:#0000FF}
+#textcolor17{color:#0000FF}
+#textcolor18{color:#0000FF}
+#textcolor19{color:#0000FF}
+#textcolor20{color:#0000FF}
+#textcolor21{color:#0000FF}
+#textcolor22{color:#0000FF}
+#textcolor23{color:#0000FF}
+#textcolor24{color:#0000FF}
+#textcolor25{color:#0000FF}
+#textcolor26{color:#0000FF}
+#textcolor27{color:#0000FF}
+#textcolor28{color:#0000FF}
+#textcolor29{color:#0000FF}
+#textcolor30{color:#0000FF}
+#textcolor31{color:#0000FF}
+#textcolor32{color:#0000FF}
+#textcolor33{color:#0000FF}
+#textcolor34{color:#0000FF}
+#textcolor35{color:#0000FF}
+#textcolor36{color:#0000FF}
+#textcolor37{color:#0000FF}
+#textcolor38{color:#0000FF}
+#textcolor39{color:#0000FF}
+#textcolor40{color:#0000FF}
+#textcolor41{color:#0000FF}
+#textcolor42{color:#0000FF}
+#textcolor43{color:#0000FF}
+#textcolor44{color:#0000FF}
+#textcolor45{color:#0000FF}
+#textcolor46{color:#0000FF}
+#textcolor47{color:#0000FF}
+#textcolor48{color:#0000FF}
+#textcolor49{color:#0000FF}
+#textcolor50{color:#0000FF}
+#textcolor51{color:#0000FF}
+#textcolor52{color:#0000FF}
+#textcolor53{color:#0000FF}
+#textcolor54{color:#0000FF}
+#textcolor55{color:#0000FF}
+#textcolor56{color:#0000FF}
+#textcolor57{color:#0000FF}
+#textcolor58{color:#0000FF}
+#textcolor59{color:#0000FF}
+#textcolor60{color:#0000FF}
+#textcolor61{color:#0000FF}
+#textcolor62{color:#0000FF}
+#textcolor63{color:#0000FF}
+#textcolor64{color:#0000FF}
+#textcolor65{color:#0000FF}
+#textcolor66{color:#0000FF}
+#textcolor67{color:#0000FF}
+#textcolor68{color:#0000FF}
 /* end css.sty */
 
