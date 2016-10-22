@@ -1,7 +1,6 @@
 \documentclass{article}
 \usepackage[utf8x]{inputenc}
 \usepackage{url}
-\usepackage[square,sort,numbers]{natbib}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{ifthen}
@@ -12,13 +11,14 @@
 \setlength\parindent{0pt}
 
 \title{Pedro Ribeiro Mendes J{\'u}nior}
-\author{University of Campinas (UNICAMP)\\Institute of Computing (IC)}
+\author{University of Campinas (UNICAMP)\\%
+  Institute of Computing (IC)\\
+  \myurl{pedrormjunior@gmail.com}%
+}
 \date{}
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
-
-\newcommand{\mycite}[1]{\citeauthor{#1}~\cite{#1}}
 
 % #1: label
 % #2: authors
@@ -29,7 +29,9 @@
 % #7: volume
 % #8: issue
 % #9: pages
-\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\href{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.}
+\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\href{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.\journalcontinued}
+\newcommand{\journalcontinued}[1]{ \bibtex{#1}}
+\newcommand{\bibtex}[1]{\ifnotempty{#1}{\href{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
 
 % #1: label
 % #2: authors
@@ -119,6 +121,7 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
   {20}
   {1}
   {256--267}
+  {Pazinato2016}
 \item\journal{ref:Penatti2015}
   {
     \authorname{Otávio}{Penatti}
@@ -137,6 +140,7 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
   {66}
   {}
   {66--81}
+  {}
 \end{enumerate}
 
 \subsection*{Proceedings}
