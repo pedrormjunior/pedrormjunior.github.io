@@ -10,7 +10,7 @@
 
 \setlength\parindent{0pt}
 
-\title{Pedro Ribeiro Mendes J{\'u}nior}
+\title{Pedro Ribeiro Mendes Júnior}
 \author{University of Campinas (UNICAMP)\\%
   Institute of Computing (IC)\\
   \href{mailto:pedrormjunior@gmail.com}{pedrormjunior@gmail.com}%
@@ -19,6 +19,7 @@
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
+\newcommand{\bibtex}[1]{\ifnotempty{#1}{\href{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
 
 % #1: label
 % #2: authors
@@ -32,7 +33,6 @@
 % #10: BibTeX
 \newcommand{\journal}[9]{\label{#1} #2 (#3), ``\href{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.\journalcontinued}
 \newcommand{\journalcontinued}[1]{ \bibtex{#1}}
-\newcommand{\bibtex}[1]{\ifnotempty{#1}{\href{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
 
 % #1: label
 % #2: authors
@@ -84,9 +84,17 @@
 \newacronym[first={\glsentrytext{us}}]{us}{U.S. Patent}{??}
 
 % Me
-\newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J\'{u}nior}}}{??}
+\newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J{\'u}nior}}}{??}
 
 \begin{document}
+\Css{
+  body{
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+}
 
 \maketitle
 
@@ -214,7 +222,7 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
   {}
 \end{enumerate}
 
-\subsection*{Preprint}
+\subsection*{Preprints}
 
 \begin{enumerate}[label={[\arabic*]},resume]
 \item\arxiv{ref:MendesJunior2016}
