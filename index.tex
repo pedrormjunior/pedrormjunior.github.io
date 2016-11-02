@@ -6,7 +6,14 @@
 \usepackage{ifthen}
 \usepackage[acronym,nohypertypes={acronym}]{glossaries}
 
-\newcommand{\myurl}[1]{\href{#1}{#1}}
+\newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
+
+% http://tex.stackexchange.com/a/245760/37199
+\makeatletter
+\newcommand{\newtabhref}[2]{\bgroup\let~\H@tilde%
+  \Link[#1 target="_blank"]{}{}%
+  {#2}\egroup\EndLink}%
+\makeatother
 
 \setlength\parindent{0pt}
 
@@ -19,7 +26,7 @@
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
-\newcommand{\bibtex}[1]{\ifnotempty{#1}{\href{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
+\newcommand{\bibtex}[1]{\ifnotempty{#1}{\newtabhref{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
 
 % #1: label
 % #2: authors
@@ -31,7 +38,7 @@
 % #8: issue
 % #9: pages
 % #10: BibTeX
-\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\href{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.\journalcontinued}
+\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\newtabhref{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.\journalcontinued}
 \newcommand{\journalcontinued}[1]{ \bibtex{#1}}
 
 % #1: label
@@ -42,7 +49,7 @@
 % #6: conference name
 % #7: pages
 % #8: BibTeX
-\newcommand{\proceedings}[8]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\href{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.} \bibtex{#8}}
+\newcommand{\proceedings}[8]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\newtabhref{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.} \bibtex{#8}}
 
 % #1: label
 % #2: authors
@@ -54,7 +61,7 @@
 % #7: number
 % #8: filing date
 % #9: publication date
-\newcommand{\patent}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\href{#4}{#5}}'', \emph{\glsfirst{#6}}. \glsfirst{#7}: #8. Filing date: #9.\patentcontinue}
+\newcommand{\patent}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\newtabhref{#4}{#5}}'', \emph{\glsfirst{#6}}. \glsfirst{#7}: #8. Filing date: #9.\patentcontinue}
 \newcommand{\patentcontinue}[1]{\ifnotempty{#1}{ Publication date: #1.}}
 
 % #1: label
@@ -63,7 +70,7 @@
 % #4: link prefix
 % #5: arXiv number
 % #6: title
-\newcommand{\arxiv}[6]{\label{#1} #2 (#3), ``\href{#4#5}{#6}'', \emph{arXiv:#5}. \textbf{preprint}.}
+\newcommand{\arxiv}[6]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \textbf{preprint}.}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
