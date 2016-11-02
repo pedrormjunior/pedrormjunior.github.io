@@ -47,12 +47,15 @@
 % #1: label
 % #2: authors
 % #3: year
+% #4: link
 % #4: title
 % #5: institution
 % #6: type
 % #7: number
 % #8: filing date
-\newcommand{\patent}[8]{\label{#1} #2 (#3), ``\underline{\textcolor{blue}{#4}}'', \emph{\glsfirst{#5}}. \glsfirst{#6}: #7. Filing date: #8.}
+% #9: publication date
+\newcommand{\patent}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\href{#4}{#5}}'', \emph{\glsfirst{#6}}. \glsfirst{#7}: #8. Filing date: #9.\patentcontinue}
+\newcommand{\patentcontinue}[1]{\ifnotempty{#1}{ Publication date: #1.}}
 
 % #1: label
 % #2: authors
@@ -253,11 +256,13 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
     \authorname[]{Anderson}{Rocha}
   }
   {2014}
+  {https://patents.google.com/patent/US20160092790A1}
   {Method for Multiclass Classification in Open-set Scenarios and uses thereof}
   {uspto}
   {us}
   {14532580}
   {11/04/2014}
+  {03/31/2016}
 \item\patent{ref:MendesJunior2014}
   {
     \gls{me}
@@ -271,11 +276,13 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
     \authorname[]{Anderson}{Rocha}
   }
   {2014}
+  {https://worldwide.espacenet.com/publicationDetails/originalDocument?FT=D&date=20160517&DB=&locale=&CC=BR&NR=102014023780A2&KC=A2&ND=1}
   {Método para classificação multiclasse em cenários abertos e usos do mesmo}
   {inpi}
   {br}
   {BR10201402378}
   {09/25/2014}
+  {05/17/2016}
 \item\patent{ref:Rocha2014}
   {
     \authorname{Anderson}{Rocha}
@@ -288,11 +295,13 @@ Datasets used in the work \ref{ref:MendesJunior2011}: \myurl{https://github.com/
     \authorname[]{Bernardo}{Stein}
   }
   {2014}
+  {}
   {Método para classificação automática de visões do coração a partir de ecocardiogramas}
   {inpi}
   {br}
   {BR10201401105}
   {05/07/2014}
+  {}
 \end{enumerate}
 
 \begin{flushright}
