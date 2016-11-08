@@ -38,7 +38,7 @@
 % #8: issue
 % #9: pages
 % #10: BibTeX
-\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\newtabhref{#4}{#5}'', \emph{\glsfirst{#6}}. #7\ifnotempty{#8}{(#8)}:#9.\journalcontinued}
+\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\newtabhref{#4}{#5}}'', \emph{\glsfirst{#6}}. \ifempty{#7}{\textbf{(to appear)}}{#7\ifnotempty{#8}{(#8)}:#9.}\journalcontinued}
 \newcommand{\journalcontinued}[1]{ \bibtex{#1}}
 
 % #1: label
@@ -70,14 +70,18 @@
 % #4: link prefix
 % #5: arXiv number
 % #6: title
-\newcommand{\arxiv}[6]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \textbf{preprint}.}
+% #7: journal or conference
+\newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(to be submitted)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
 
 % Journals
-\newacronym[first={\glsentrytext{compbiomed}}]{compbiomed}{Computers in Biology and Medicine}{??}
-\newacronym[first={\glsentrytext{jbhi}}]{jbhi}{IEEE Journal of Biomedical and Health Informatics}{??}
+\newcommand{\definejournal}[2]{\newacronym[first={\glsentrytext{#1}}]{#1}{#2}{??}}
+\definejournal{compbiomed}{Computers in Biology and Medicine}
+\definejournal{jbhi}{IEEE Journal of Biomedical and Health Informatics}
+\definejournal{ml}{Machine Learning}
+\definejournal{jmlr}{Journal of Machine Learning Research}
 
 % Proceedings
 \newacronym{wuwsibgrapi}{SIBGRAPI}{WUW Workshop of Undergraduate Work -- XXIII Conference on Graphics, Patterns and Image}
@@ -113,7 +117,9 @@ CV: \myurl{http://lattes.cnpq.br/4535492803722330} (in Portuguese)
 \section*{Important material}
 \label{sec:important-material}
 
-Results and statistical analysis of \ref{ref:MendesJunior2016}: \myurl{https://github.com/pedrormjunior/ssvm-results}.
+Feature vectors used in \ref{ref:MendesJunior2016}: \myurl{https://dx.doi.org/10.6084/m9.figshare.1097614}.
+
+Results and statistical analysis of \ref{ref:MendesJunior2016a}: \myurl{https://github.com/pedrormjunior/ssvm-results}.
 
 Proposed algorithm and baselines used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormjunior/vlpl}.
 
@@ -124,6 +130,26 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
 \subsection*{Journal articles}
 
 \begin{enumerate}[label={[\arabic*]}]
+\item\journal{ref:MendesJunior2016}
+  {
+    \gls{me}
+    \authorname{Roberto}{Souza}
+    \authorname{Rafael}{Werneck}
+    \authorname{Bernardo}{Stein}
+    \authorname{Daniel}{Pazinato}
+    \authorname{Waldir}{de Almeida}
+    \authorname{Otávio}{Penatti}
+    \authorname{Ricardo}{Torres}
+    \authorname[]{Anderson}{Rocha}
+  }
+  {2016}
+  {}
+  {Nearest neighbors distance ratio open-set classifier}
+  {ml}
+  {}
+  {}
+  {}
+  {}
 \item\journal{ref:Pazinato2016}
   {
     \authorname{Daniel}{Pazinato}
@@ -234,10 +260,10 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {}
 \end{enumerate}
 
-\subsection*{Preprints}
+\subsection*{Submitted papers}
 
 \begin{enumerate}[label={[\arabic*]},resume]
-\item\arxiv{ref:MendesJunior2016}
+\item\arxiv{ref:MendesJunior2016a}
   {
     \gls{me}
     \authorname{Terrance}{Boult}
@@ -248,6 +274,7 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {https://arxiv.org/abs/}
   {1606.03802}
   {Specialized Support Vector Machines for open-set recognition}
+  {jmlr}
 \end{enumerate}
 
 \subsection*{Patents}
