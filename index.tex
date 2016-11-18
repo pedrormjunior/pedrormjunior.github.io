@@ -18,8 +18,8 @@
 \setlength\parindent{0pt}
 
 \title{Pedro Ribeiro Mendes Júnior}
-\author{University of Campinas (UNICAMP)\\%
-  Institute of Computing (IC)\\
+\author{\glsfirst{unicamp}\\%
+  \glsfirst{ic}\\
   \href{mailto:pedrormjunior@gmail.com}{pedrormjunior@gmail.com}%
 }
 \date{}
@@ -50,6 +50,16 @@
 % #7: pages
 % #8: BibTeX
 \newcommand{\proceedings}[8]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\newtabhref{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.} \bibtex{#8}}
+
+% #1: label
+% #2: year
+% #3: doi
+% #4: title
+% #5: institution
+% #6: type
+% #7: BibTeX
+% #8: in Portuguese
+\newcommand{\thesis}[8]{\label{#1} \gls{melast} (#2), ``\ifempty{#3}{\underline{\textcolor{blue}{#4}}}{\newtabhref{#3}{#4}}'' ({#6}\ifnotempty{#8}{; in Portuguese}), \emph{\glsfirst{#5}}. \bibtex{#7}}
 
 % #1: label
 % #2: authors
@@ -89,6 +99,11 @@
 \newacronym[first={\glsentrytext{mediaeval2014}}]{mediaeval2014}{MediaEval 2014 Workshop}{??}
 \newacronym[first={\glsentrytext{mediaeval2015}}]{mediaeval2015}{MediaEval 2015 Workshop}{??}
 
+% Institutions
+\newacronym{unicamp}{UNICAMP}{University of Campinas}
+\newacronym{ic}{IC}{Institute of Computing}
+\newacronym{ufop}{UFOP}{Universidade Federal de Ouro Preto}
+
 % Patent institutions
 \newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
 \newacronym{uspto}{USPTO}{United States Patent and Trademark Office}
@@ -99,6 +114,7 @@
 
 % Me
 \newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J{\'u}nior}}}{??}
+\newacronym[first={\glsentrytext{melast}}]{melast}{\textbf{\authorname[]{Pedro}{Mendes J{\'u}nior}}}{??}
 
 \begin{document}
 \Css{
@@ -275,6 +291,33 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {1606.03802}
   {Specialized Support Vector Machines for open-set recognition}
   {jmlr}
+\end{enumerate}
+
+\subsection*{Theses}
+
+% #1: label
+% #2: year
+% #3: doi
+% #4: title
+% #5: institution
+% #6: BibTeX
+\begin{enumerate}[label={[\arabic*]},resume]
+\item\thesis{ref:MendesJunior2014b}
+  {2014}
+  {http://www.bibliotecadigital.unicamp.br/document/?code=000935853}
+  {Open-set optimum-path forest classifier}
+  {unicamp}
+  {MSc}
+  {}
+  {}
+\item\thesis{ref:MendesJunior2012}
+  {2012}
+  {http://www.decom.ufop.br/menotti/monoII121/files/BCC391-121-vf-08.2.4114-PedroRibeiroMendesJunior.pdf}
+  {Uso de paralelismo de dados em algoritmos de processamento de imagens utilizando Haskell}
+  {ufop}
+  {BCS}
+  {}
+  {true}
 \end{enumerate}
 
 \subsection*{Patents}
