@@ -5,8 +5,7 @@
 \usepackage{enumitem}
 \usepackage{ifthen}
 \usepackage[acronym,nohypertypes={acronym}]{glossaries}
-
-\newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
+\usepackage{pifont}
 
 % http://tex.stackexchange.com/a/245760/37199
 \makeatletter
@@ -19,14 +18,16 @@
 
 \title{Pedro Ribeiro Mendes Júnior}
 \author{\glsfirst{unicamp}\\%
-  \glsfirst{ic}\\
-  \href{mailto:pedrormjunior@gmail.com}{pedrormjunior@gmail.com}%
+  \glsfirst{ic}\\%
 }
-\date{}
+\date{\href{mailto:pedrormjunior@gmail.com}{pedrormjunior@gmail.com}}
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
 \newcommand{\bibtex}[1]{\ifnotempty{#1}{\newtabhref{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
+\newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
+\newcommand{\toppublication}{\ding{72}}
+\newcommand{\formatdate}[3]{#2/#3/#1}
 
 % #1: label
 % #2: authors
@@ -38,7 +39,7 @@
 % #8: issue
 % #9: pages
 % #10: BibTeX
-\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\newtabhref{#4}{#5}}'', \emph{\glsfirst{#6}}. \ifempty{#7}{\textbf{(to appear)}}{#7\ifnotempty{#8}{(#8)}:#9.}\journalcontinued}
+\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\underline{\textcolor{blue}{#5}}}{\newtabhref{#4}{#5}}'', \emph{\glsfirst{#6}}. \ifempty{#7}{\textbf{(\ifempty{#4}{to appear}{online})}}{#7\ifnotempty{#8}{(#8)}:#9.}\journalcontinued}
 \newcommand{\journalcontinued}[1]{ \bibtex{#1}}
 
 % #1: label
@@ -103,6 +104,8 @@
 \newacronym{unicamp}{UNICAMP}{University of Campinas}
 \newacronym{ic}{IC}{Institute of Computing}
 \newacronym{ufop}{UFOP}{Universidade Federal de Ouro Preto}
+\newacronym{ufop-en}{UFOP}{Federal University of Ouro Preto}
+\newacronym{uccs}{UCCS}{University of Colorado Colorado Springs}
 
 % Patent institutions
 \newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
@@ -127,6 +130,14 @@
 }
 
 \maketitle
+
+I am a PhD candidate at \gls{unicamp}, working mainly with recognition in open-set scenarios, developing methods that can be applied to general open-set problems \ref{ref:MendesJunior2016} \ref{ref:MendesJunior2016a}.
+I obtained the master's degree through \gls{unicamp} in open-set recognition \ref{ref:MendesJunior2014b}.
+During the masters, I was member of a project financed by Samsung in which we have worked in medical problems as well \ref{ref:Pazinato2016} \ref{ref:Penatti2015}.
+This project generated some patents for an open-set method \ref{ref:MendesJunior2014a} \ref{ref:MendesJunior2014} and for a heart view classification method \ref{ref:Rocha2014}.
+Through \gls{ufop-en} I obtained a bachelor's degree in Computer Science \ref{ref:MendesJunior2012}.
+During the undergraduate, I worked mainly with digital image processing and in the specific problem of vehicle license plate location \ref{ref:MendesJunior2011} and I concluded my education studying the Haskell functional programming language for image processing \ref{ref:MendesJunior2012}.
+Currently, I am working at \gls{uccs} as a research assistant investigating open-set recognition.
 
 CV: \myurl{http://lattes.cnpq.br/4535492803722330} (in Portuguese)
 
@@ -159,13 +170,13 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
     \authorname[]{Anderson}{Rocha}
   }
   {2016}
-  {}
+  {http://link.springer.com/article/10.1007/s10994-016-5610-8}
   {Nearest neighbors distance ratio open-set classifier}
   {ml}
   {}
   {}
   {}
-  {}
+  {MendesJunior2016}
 \item\journal{ref:Pazinato2016}
   {
     \authorname{Daniel}{Pazinato}
@@ -341,8 +352,8 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {uspto}
   {us}
   {14532580}
-  {11/04/2014}
-  {03/31/2016}
+  {\formatdate{2014}{11}{04}}
+  {\formatdate{2016}{03}{31}}
 \item\patent{ref:MendesJunior2014}
   {
     \gls{me}
@@ -361,8 +372,8 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {inpi}
   {br}
   {BR10201402378}
-  {09/25/2014}
-  {05/17/2016}
+  {\formatdate{2014}{09}{25}}
+  {\formatdate{2016}{05}{17}}
 \item\patent{ref:Rocha2014}
   {
     \authorname{Anderson}{Rocha}
@@ -380,7 +391,7 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {inpi}
   {br}
   {BR10201401105}
-  {05/07/2014}
+  {\formatdate{2014}{05}{07}}
   {}
 \end{enumerate}
 
