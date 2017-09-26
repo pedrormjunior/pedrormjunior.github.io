@@ -83,7 +83,7 @@
 % #5: arXiv number
 % #6: title
 % #7: journal or conference
-\newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(to be submitted)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}}}
+\newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
@@ -91,7 +91,7 @@
 % Journals
 \newcommand{\definejournal}[2]{\newacronym[first={\glsentrytext{#1}}]{#1}{#2}{??}}
 \definejournal{compbiomed}{Computers in Biology and Medicine}
-\definejournal{jbhi}{IEEE Journal of Biomedical and Health Informatics}
+\definejournal{jbhi}{Journal of Biomedical and Health Informatics}
 \definejournal{ml}{Machine Learning}
 \definejournal{jmlr}{Journal of Machine Learning Research}
 \definejournal{fgcs}{Future Generation Computer Systems}
@@ -104,7 +104,7 @@
 % Institutions
 \newacronym{unicamp}{UNICAMP}{University of Campinas}
 \newacronym{ic}{IC}{Institute of Computing}
-\newacronym{recod}{RECOD}{Reasoning for Complex Data lab}
+\newacronym[first={Reasoning for Complex Data (\glsentrytext{recod}) lab}]{recod}{RECOD}{??}
 \newacronym{ufop}{UFOP}{Universidade Federal de Ouro Preto}
 \newacronym{ufop-en}{UFOP}{Federal University of Ouro Preto}
 \newacronym{uccs}{UCCS}{University of Colorado Colorado Springs}
@@ -133,13 +133,13 @@
 
 \maketitle
 
-I am a Ph.D. candidate at \gls{unicamp}, working mainly with recognition in open-set scenarios, developing methods that can be applied to general open-set problems \ref{ref:MendesJunior2017} \ref{ref:MendesJunior2016a}.
+I am a Ph.D. candidate at \gls{unicamp}, working mainly with recognition in open-set scenarios, investigating methods that can be applied to general open-set problems \ref{ref:MendesJunior2017} \ref{ref:MendesJunior2016a}.
 I obtained the master's degree through \gls{unicamp} in open-set recognition \ref{ref:MendesJunior2014b}.
 During the masters, I was member of a project financed by Samsung in which we have worked in medical problems as well \ref{ref:Pazinato2016} \ref{ref:Penatti2015}.
 This project generated some patents for an open-set method \ref{ref:MendesJunior2014a} \ref{ref:MendesJunior2014} and for a heart view classification method \ref{ref:Rocha2014}.
-Through \gls{ufop-en} I obtained a bachelor's degree in Computer Science \ref{ref:MendesJunior2012}.
-During the undergraduate, I worked mainly with digital image processing and in the specific problem of vehicle license plate location \ref{ref:MendesJunior2011} and I concluded my education studying the Haskell functional programming language for image processing \ref{ref:MendesJunior2012}.
-I have worked at \gls{uccs} as a research assistant investigating open-set recognition for one year.
+Through \gls{ufop-en} I obtained the bachelor's degree in Computer Science \ref{ref:MendesJunior2012}.
+During the undergraduate, I worked mainly with digital image processing in the specific problem of vehicle license plate location \ref{ref:MendesJunior2011} and I concluded my education studying the Haskell functional programming language for image processing \ref{ref:MendesJunior2012}.
+I have worked at \gls{uccs} as a research assistant investigating open-set recognition for one year---2016--2017.
 
 \newtabhref{http://lattes.cnpq.br/4535492803722330}{CV (in Portuguese)}
 ---
@@ -148,17 +148,12 @@ I have worked at \gls{uccs} as a research assistant investigating open-set recog
 \newtabhref{https://recodbr.wordpress.com/team/students}{\gls{recod} page}
 ---
 \newtabhref{https://github.com/pedrormjunior}{Github page}
-
-\section*{Important material}
-\label{sec:important-material}
-
-Feature vectors used in \ref{ref:MendesJunior2017}: \myurl{https://dx.doi.org/10.6084/m9.figshare.1097614}.
-
-Results and statistical analysis of \ref{ref:MendesJunior2016a}: \myurl{https://github.com/pedrormjunior/ssvm-results}.
-
-Proposed algorithm and baselines used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormjunior/vlpl}.
-
-Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormjunior/vlpl/blob/master/imgs-database}.
+---
+\newtabhref{http://www.unicamp.br}{UNICAMP}
+---
+\newtabhref{https://www.ic.unicamp.br/en}{IC}
+---
+\newtabhref{http://www.recod.ic.unicamp.br}{RECOD}
 
 \section*{Publications}
 
@@ -328,7 +323,7 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {https://arxiv.org/abs/}
   {1606.03802}
   {Specialized Support Vector Machines for open-set recognition}
-  {jmlr}
+  {}
 \end{enumerate}
 
 \subsection*{Theses}
@@ -422,6 +417,17 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
   {}
 \end{enumerate}
 
+\section*{Reproducibility}
+\label{sec:reproducibility}
+
+Feature vectors used in \ref{ref:MendesJunior2017}: \myurl{https://dx.doi.org/10.6084/m9.figshare.1097614}.
+
+Results and statistical analysis of \ref{ref:MendesJunior2016a}: \myurl{https://github.com/pedrormjunior/ssvm-results}.
+
+Proposed algorithm and baselines used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormjunior/vlpl}.
+
+Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormjunior/vlpl/blob/master/imgs-database}.
+
 \section*{News}
 
 \begin{enumerate}[label={[\arabic*]},resume]
@@ -429,7 +435,7 @@ Datasets used in \ref{ref:MendesJunior2011}: \myurl{https://github.com/pedrormju
 \end{enumerate}
 
 \begin{flushright}
-  \footnotesize Last updated on \today{}.
+  \footnotesize Last \hfill updated on \today{}.
 \end{flushright}
 
 \end{document}
