@@ -17,9 +17,9 @@
 \setlength\parindent{0pt}
 
 \title{Pedro Ribeiro Mendes Júnior}
-\author{\glsfirst{unicamp}\\%
-  \glsfirst{ic}\\%
-  \gls{recod}\\%
+\author{\newtabhref{http://www.unicamp.br}{\glsfirst{unicamp}}\\%
+  \newtabhref{https://www.ic.unicamp.br/en}{\glsfirst{ic}}\\%
+  \newtabhref{http://www.recod.ic.unicamp.br}{\gls{recod}}\\%
 }
 \date{\href{mailto:pedrormjunior@gmail.com}{pedrormjunior@gmail.com}}
 
@@ -95,6 +95,7 @@
 \definejournal{ml}{Machine Learning}
 \definejournal{jmlr}{Journal of Machine Learning Research}
 \definejournal{fgcs}{Future Generation Computer Systems}
+\definejournal{a}{Access}
 % Proceedings
 \newacronym{wuwsibgrapi}{SIBGRAPI}{WUW Workshop of Undergraduate Work -- XXIII Conference on Graphics, Patterns and Image}
 \newacronym{smc}{SMC}{IEEE Intl. Conference on Systems, Man, and Cybernetics}
@@ -150,18 +151,27 @@ I have worked at \gls{uccs} as a research assistant investigating open-set recog
 \newtabhref{https://github.com/pedrormjunior}{Github page}
 ---
 \newtabhref{http://orcid.org/0000-0001-8086-018X}{ORCID}
----
-\newtabhref{http://www.unicamp.br}{UNICAMP}
----
-\newtabhref{https://www.ic.unicamp.br/en}{IC}
----
-\newtabhref{http://www.recod.ic.unicamp.br}{RECOD}
 
 \section*{Publications}
 
 \subsection*{Journal articles}
 
 \begin{enumerate}[label={[\arabic*]}]
+\item\journal{ref:Neira2018}
+  {
+    \authorname{Manuel}{Neira}
+    \gls{me}
+    \authorname{Anderson}{Rocha}
+    \authorname[]{Ricardo}{Torres}
+  }
+  {2018}
+  {https://doi.org/10.1109/ACCESS.2018.2824240}
+  {Data-fusion techniques for open-set recognition problems}
+  {a}
+  {}
+  {}
+  {}
+  {Neira2018}
 \item\journal{ref:Werneck2018}
   {
     \authorname{Rafael}{Werneck}
@@ -170,8 +180,8 @@ I have worked at \gls{uccs} as a research assistant investigating open-set recog
     \authorname{Daniel}{Pazinato}
     \gls{me}
     \authorname{Otávio}{Penatti}
-    \authorname[]{Anderson}{Rocha}
-    \authorname{Ricardo}{Torres}
+    \authorname{Anderson}{Rocha}
+    \authorname[]{Ricardo}{Torres}
   }
   {2018}
   {http://www.sciencedirect.com/science/article/pii/S0167739X17301565}
@@ -339,7 +349,7 @@ I have worked at \gls{uccs} as a research assistant investigating open-set recog
 \begin{enumerate}[label={[\arabic*]},resume]
 \item\thesis{ref:MendesJunior2014b}
   {2014}
-  {http://www.bibliotecadigital.unicamp.br/document/?code=000935853}
+  {http://repositorio.unicamp.br/jspui/handle/REPOSIP/275530}
   {Open-set optimum-path forest classifier}
   {unicamp}
   {MSc}
