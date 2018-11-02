@@ -123,6 +123,18 @@
 \newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J{\'u}nior}}}{??}
 \newacronym[first={\glsentrytext{melast}}]{melast}{\textbf{\authorname[]{Pedro}{Mendes J{\'u}nior}}}{??}
 
+% \newcommand\googlefont{Inconsolata} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Work Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Maven Pro} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Alef} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Mada} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Lekton} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Metrophobic} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Duru Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
+\newcommand\googlefont{Averia Serif Libre} %https://www.w3schools.com/howto/howto_google_fonts.asp
+% \newcommand\googlefont{Convergence} %https://www.w3schools.com/howto/howto_google_fonts.asp
+\Configure{HTML}{\HCode{<link href="https://fonts.googleapis.com/css?family=\googlefont" rel="stylesheet">\Hnewline}}{\HCode{\Hnewline}}
+
 \begin{document}
 \Css{
   body{
@@ -132,6 +144,10 @@
     margin-right: auto;
     margin-top: 3em;
     margin-bottom: 3em;
+    % font-family: "Courier New", Courier, monospace;
+    font-family: "\googlefont";
+    % font-size: 14pt;
+    line-height: 18px;
   }
   % https://stackoverflow.com/a/34957267
   % The value in `max-width` below needs to be the sum of `max-width`
