@@ -140,7 +140,7 @@ mi + mo.qopname{margin-left:0.3em}
 table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 div.longtable{text-align:center;}
 .supertabular {text-align:center}
- a:visited { color: #000077; text-decoration: none; } a:link { color: blue; text-decoration: none; } a:hover { color: red; text-decoration: none; } a:active { color: red; text-decoration: none; } body{ max-width: 650px; text-align: justify; margin-left: auto; margin-right: auto; margin-top: 3em; margin-bottom: 3em; font-family: "Averia Serif Libre"; line-height: 18px; } @media screen and ( max-width: 690px ){ body{ margin-left: 20px; margin-right: 20px; } } 
+ a:hover, a:visited, a:link, a:active { text-decoration: none; } a:visited { color: darkblue; } a:link { color: blue; } a:hover { color: darkred; } a:active { color: red; } body{ max-width: 650px; text-align: justify; margin-left: auto; margin-right: auto; margin-top: 3em; margin-bottom: 3em; font-family: "Averia Serif Libre"; line-height: 18px; } @media screen and ( max-width: 690px ){ body{ margin-left: 20px; margin-right: 20px; } } 
 #textcolor1{color:#0000FF}
 #textcolor2{color:#0000FF}
 #textcolor3{color:#0000FF}

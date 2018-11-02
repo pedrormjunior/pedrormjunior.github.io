@@ -137,23 +137,11 @@
 
 \begin{document}
 \Css{
-  % https://stackoverflow.com/a/2789750
-  a:visited {
-    color: \#000077;
-    text-decoration: none;
-  }
-  a:link {
-    color: blue;
-    text-decoration: none;
-  }
-  a:hover {
-    color: red;
-    text-decoration: none;
-  }
-  a:active {
-    color: red;
-    text-decoration: none;
-  }
+  a:hover, a:visited, a:link, a:active { text-decoration: none; }
+  a:visited { color: darkblue; } %https://stackoverflow.com/a/2789750
+  a:link { color: blue; }
+  a:hover { color: darkred; }
+  a:active { color: red; }
   body{
     max-width: 650px;
     text-align: justify;
