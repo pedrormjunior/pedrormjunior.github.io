@@ -126,12 +126,21 @@
 \begin{document}
 \Css{
   body{
-    max-width: 40em;
+    max-width: 650px;
     text-align: justify;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3em;
     margin-bottom: 3em;
+  }
+  % https://stackoverflow.com/a/34957267
+  % The value in `max-width` below needs to be the sum of `max-width`
+  % above with `margin-left` and `margin-right` below.
+  @media screen and ( max-width: 690px ){
+    body{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
   }
 }
 
