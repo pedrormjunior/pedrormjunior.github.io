@@ -11,3 +11,6 @@
 *.xref
 *.idv
 *.lg
+
+template.css
+template.html

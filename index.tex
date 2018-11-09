@@ -1,21 +1,5 @@
 % -*- eval: (git-gutter-mode); -*-
-\documentclass{article}
-\usepackage[utf8x,utf8]{inputenc}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{ifthen}
-\usepackage[acronym,nohypertypes={acronym}]{glossaries}
-\usepackage{pifont}
-
-% http://tex.stackexchange.com/a/245760/37199
-\makeatletter
-\newcommand{\newtabhref}[2]{\bgroup\let~\H@tilde%
-  \Link[#1 target="_blank"]{}{}%
-  {#2}\egroup\EndLink}%
-\makeatother
-
-\setlength\parindent{0pt}
+\input{common}
 
 \title{Pedro Ribeiro Mendes Júnior}
 \author{\newtabhref{http://www.unicamp.br}{\glsfirst{unicamp}}\\%
@@ -24,146 +8,8 @@
 }
 \date{\href{mailto:pedrormjunior@gmail.com}{pedrormjunior@gmail.com}}
 
-\newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
-\newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
-\newcommand{\bibtex}[1]{\ifnotempty{#1}{\newtabhref{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
-\newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
-\newcommand{\toppublication}{\ding{72}}
-\newcommand{\formatdate}[3]{#2/#3/#1}
-
-% #1: label
-% #2: authors
-% #3: year
-% #4: doi
-% #5: title
-% #6: journal name
-% #7: volume
-% #8: issue
-% #9: pages
-% #10: BibTeX
-\newcommand{\journal}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \emph{\glsfirst{#6}}. \ifempty{#7}{\textbf{(\ifempty{#4}{to appear}{online})}}{#7\ifnotempty{#8}{(#8)}:#9.}\journalcontinued}
-\newcommand{\journalcontinued}[1]{ \bibtex{#1}}
-
-% #1: label
-% #2: authors
-% #3: year
-% #4: doi
-% #5: title
-% #6: conference name
-% #7: pages
-% #8: BibTeX
-\newcommand{\proceedings}[8]{\label{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.} \bibtex{#8}}
-
-% #1: label
-% #2: year
-% #3: doi
-% #4: title
-% #5: institution
-% #6: type
-% #7: BibTeX
-% #8: in Portuguese
-\newcommand{\thesis}[8]{\label{#1} \gls{melast} (#2), ``\ifempty{#3}{\textcolor{blue}{#4}}{\newtabhref{#3}{#4}}'' ({#6}\ifnotempty{#8}{; in Portuguese}), \emph{\glsfirst{#5}}. \bibtex{#7}}
-
-% #1: label
-% #2: authors
-% #3: year
-% #4: link
-% #4: title
-% #5: institution
-% #6: type
-% #7: number
-% #8: filing date
-% #9: publication date
-\newcommand{\patent}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \emph{\glsfirst{#6}}. \glsfirst{#7}: #8. Filing date: #9.\patentcontinue}
-\newcommand{\patentcontinue}[1]{\ifnotempty{#1}{ Publication date: #1.}}
-
-% #1: label
-% #2: authors
-% #3: year
-% #4: link prefix
-% #5: arXiv number
-% #6: title
-% #7: journal or conference
-\newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}}}
-
-\newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
-\newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
-
-% Journals
-\newcommand{\definejournal}[2]{\newacronym[first={\glsentrytext{#1}}]{#1}{#2}{??}}
-\definejournal{compbiomed}{Elsevier Computers in Biology and Medicine}
-\definejournal{jbhi}{IEEE Journal of Biomedical and Health Informatics}
-\definejournal{ml}{Springer Machine Learning}
-\definejournal{jmlr}{Journal of Machine Learning Research}
-\definejournal{fgcs}{Elsevier Future Generation Computer Systems}
-\definejournal{a}{IEEE Access}
-% Proceedings
-\newacronym{wuwsibgrapi}{SIBGRAPI}{WUW Workshop of Undergraduate Work, XXIII Conference on Graphics, Patterns and Image}
-\newacronym{smc}{SMC}{IEEE Intl. Conference on Systems, Man, and Cybernetics}
-\newacronym[first={\glsentrytext{mediaeval2014}}]{mediaeval2014}{MediaEval 2014 Workshop}{??}
-\newacronym[first={\glsentrytext{mediaeval2015}}]{mediaeval2015}{MediaEval 2015 Workshop}{??}
-
-% Institutions
-\newacronym{unicamp}{UNICAMP}{University of Campinas}
-\newacronym{ic}{IC}{Institute of Computing}
-\newacronym[first={Reasoning for Complex Data (\glsentrytext{recod}) lab}]{recod}{RECOD}{??}
-\newacronym{ufop}{UFOP}{Universidade Federal de Ouro Preto}
-\newacronym{ufop-en}{UFOP}{Federal University of Ouro Preto}
-\newacronym{uccs}{UCCS}{University of Colorado Colorado Springs}
-
-% Patent institutions
-\newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
-\newacronym{uspto}{USPTO}{United States Patent and Trademark Office}
-
-% Countries
-\newacronym[first={\glsentrytext{br}}]{br}{Brazil}{??}
-\newacronym[first={\glsentrytext{us}}]{us}{U.S. Patent}{??}
-
-% Me
-\newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J{\'u}nior}}}{??}
-\newacronym[first={\glsentrytext{melast}}]{melast}{\textbf{\authorname[]{Pedro}{Mendes J{\'u}nior}}}{??}
-
-% \newcommand\googlefont{Inconsolata} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Work Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Maven Pro} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Alef} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Mada} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Lekton} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Metrophobic} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Duru Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
-\newcommand\googlefont{Averia Serif Libre} %https://www.w3schools.com/howto/howto_google_fonts.asp
-% \newcommand\googlefont{Convergence} %https://www.w3schools.com/howto/howto_google_fonts.asp
-\Configure{HTML}{\HCode{<link href="https://fonts.googleapis.com/css?family=\googlefont" rel="stylesheet">\Hnewline}}{\HCode{\Hnewline}}
-
 \begin{document}
-\Css{
-  a:hover, a:visited, a:link, a:active { text-decoration: none; }
-  a:visited { color: darkblue; } %https://stackoverflow.com/a/2789750
-  a:link { color: blue; }
-  a:hover { color: darkred; }
-  a:active { color: red; }
-  body{
-    max-width: 650px;
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
-    margin-bottom: 0px;
-    % font-family: "Courier New", Courier, monospace;
-    font-family: "\googlefont";
-    % font-size: 14pt;
-    line-height: 18px;
-  }
-  % https://stackoverflow.com/a/34957267
-  % The value in `max-width` below needs to be the sum of `max-width`
-  % above with `margin-left` and `margin-right` below.
-  @media screen and ( max-width: 690px ){
-    body{
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-  }
-}
+\input{css}
 
 \maketitle
 
@@ -490,10 +336,6 @@ Datasets employed in \ref{ref:MendesJunior2011}: \newtabhref{https://github.com/
 %   \item \newtabhref{https://recodbr.wordpress.com/2016/06/02/recod-is-among-the-winners-of-unicamp-inventor-award-2016}{RECOD is among the winners of Unicamp Inventor Award 2016}
 % \end{enumerate}
 
-\begin{flushright}
-  \
-
-  \footnotesize Last \hfill updated on \today{}
-\end{flushright}
+\input{footer}
 
 \end{document}

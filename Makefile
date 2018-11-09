@@ -1,9 +1,11 @@
-all: index.html
+all: \
+	index.html \
+	template.html \
 
 makelatex = \
 	for i in $$(seq 1); do \
 		htlatex $(1) "xhtml, mathml, charset=utf-8" " -cunihtf -utf8"; \
 	done; \
 
-index.html: index.tex
+%.html: %.tex common.tex css.tex footer.tex
 	$(call makelatex,$<)
