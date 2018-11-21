@@ -1,6 +1,7 @@
 all: \
 	index.html \
 	template.html \
+	dataset-VLPL.html \
 
 makelatex = \
 	for i in $$(seq 1); do \

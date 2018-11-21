@@ -153,6 +153,25 @@
 \newacronym[first={\glsentrytext{br}}]{br}{Brazil}{??}
 \newacronym[first={\glsentrytext{us}}]{us}{U.S. Patent}{??}
 
+% Proceedings general entries.
+\newcommand\MendesJunior[1]{%
+  \ifthenelse{\equal{#1}{2011}}{%
+    \proceedings{ref:MendesJunior2011}
+    {
+      \authorsymbol{PedroMendesJunior}
+      \authorsymbol{JoseMariaNeves}
+      \authorsymbol{AndreaTavares}
+      \authorsymbol[]{DavidMenotti}
+    }
+    {2011}
+    {http://dx.doi.org/10.1109/icsmc.2011.6084108}
+    {Towards an automatic vehicle access control system: License plate location}
+    {smc}
+    {2916--2921}
+    {MendesJunior2011}
+  }{}
+}
+
 % \newcommand\googlefont{Inconsolata} %https://www.w3schools.com/howto/howto_google_fonts.asp
 % \newcommand\googlefont{Work Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
 % \newcommand\googlefont{Maven Pro} %https://www.w3schools.com/howto/howto_google_fonts.asp
