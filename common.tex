@@ -16,6 +16,10 @@
   {#2}\egroup\EndLink}%
 \makeatother
 
+\newcommand{\blackhref}[3][black]{%
+  \href{#2}{\textcolor{#1}{#3}}%
+}
+
 \setlength\parindent{0pt}
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
@@ -56,7 +60,7 @@
 % #6: type
 % #7: BibTeX
 % #8: in Portuguese
-\newcommand{\thesis}[8]{\label{#1} \gls{melast} (#2), ``\ifempty{#3}{\textcolor{blue}{#4}}{\newtabhref{#3}{#4}}'' ({#6}\ifnotempty{#8}{; in Portuguese}), \emph{\glsfirst{#5}}. \bibtex{#7}}
+\newcommand{\thesis}[8]{\label{#1} \authorsymbol{PedroMendesJunior} (#2), ``\ifempty{#3}{\textcolor{blue}{#4}}{\newtabhref{#3}{#4}}'' ({#6}\ifnotempty{#8}{; in Portuguese}), \emph{\glsfirst{#5}}. \bibtex{#7}}
 
 % #1: label
 % #2: authors
@@ -81,7 +85,7 @@
 \newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
-\newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
+\newcommand{\authorsymbol}[2][\sepauthor{}]{\glssymbol{#2}#1}
 
 % Journals
 \newcommand{\definejournal}[2]{\newacronym[first={\glsentrytext{#1}}]{#1}{#2}{??}}
@@ -110,10 +114,33 @@
 % \glsdesc: full name
 % \glstext: first name
 % \glssymbol: author name (in inverse way)
-\newacronym[first={\href{https://pedrormjunior.github.io/}{\glsentrydesc{PedroMendesJunior}}},symbol={Mendes Júnior, Pedro}]{PedroMendesJunior}{Pedro}{Pedro Ribeiro Mendes Júnior}
-\newacronym[first={\href{https://web.inf.ufpr.br/menotti/}{\glsentrydesc{DavidMenotti}}},symbol={Menotti, David}]{DavidMenotti}{David}{David Menotti Gomes}
-\newacronym[first={\href{http://www.decom.ufop.br/jmneves/}{\glsentrydesc{JoseMariaNeves}}},symbol={Neves, José Maria}]{JoseMariaNeves}{José Maria}{José Maria Ribeiro Neves}
-\newacronym[first={\href{https://scholar.google.com/citations?user=CqjwW3MAAAAJ}{\glsentrydesc{AndreaTavares}}},symbol={Tavares, Andréa}]{AndreaTavares}{Andréa}{Andréa Iabrudi Tavares}
+\newacronym[first={\href{https://pedrormjunior.github.io/}{\glsentrydesc{PedroMendesJunior}}},symbol={\blackhref{https://pedrormjunior.github.io/}{\textbf{Mendes Júnior, Pedro}}}]{PedroMendesJunior}{Pedro}{Pedro Ribeiro Mendes Júnior}
+\newacronym[first={\href{https://web.inf.ufpr.br/menotti/}{\glsentrydesc{DavidMenotti}}},symbol={\blackhref{https://web.inf.ufpr.br/menotti/}{Menotti, David}}]{DavidMenotti}{David}{David Menotti Gomes}
+\newacronym[first={\href{http://www.decom.ufop.br/jmneves/}{\glsentrydesc{JoseMariaNeves}}},symbol={\blackhref{http://www.decom.ufop.br/jmneves/}{Neves, José Maria}}]{JoseMariaNeves}{José Maria}{José Maria Ribeiro Neves}
+\newacronym[first={\href{http://lattes.cnpq.br/7851263252868872}{\glsentrydesc{AndreaTavares}}},symbol={\blackhref{http://lattes.cnpq.br/7851263252868872}{Tavares, Andrea}}]{AndreaTavares}{Andrea}{Andrea Iabrudi Tavares}
+\newacronym[first={\href{http://www.ic.unicamp.br/~rtorres/}{\glsentrydesc{RicardoTorres}}},symbol={\blackhref{http://www.ic.unicamp.br/~rtorres/}{Torres, Ricardo}}]{RicardoTorres}{Ricardo}{Ricardo da Silva Torres}
+\newacronym[first={\href{http://www.ic.unicamp.br/~rocha/}{\glsentrydesc{AndersonRocha}}},symbol={\blackhref{http://www.ic.unicamp.br/~rocha/}{Rocha, Anderson}}]{AndersonRocha}{Anderson}{Anderson de Rezende Rocha}
+\newacronym[first={\href{https://orcid.org/0000-0002-6527-6740}{\glsentrydesc{ManuelNeira}}},symbol={\blackhref{https://orcid.org/0000-0002-6527-6740}{Neira, Manuel}}]{ManuelNeira}{Manuel}{Manuel Alberto Córdova Neira}
+\newacronym[first={\href{http://www.recod.ic.unicamp.br/~rwerneck/}{\glsentrydesc{RafaelWerneck}}},symbol={\blackhref{http://www.recod.ic.unicamp.br/~rwerneck/}{Werneck, Rafael}}]{RafaelWerneck}{Rafael}{Rafael de Oliveira Werneck}
+\newacronym[first={\href{http://www.recod.ic.unicamp.br/~otavio/academico/index.htm}{\glsentrydesc{OtavioPenatti}}},symbol={\blackhref{http://www.recod.ic.unicamp.br/~otavio/academico/index.htm}{Penatti, Otávio}}]{OtavioPenatti}{Otávio}{Otávio Augusto Bizetto Penatti}
+\newacronym[first={\href{http://lattes.cnpq.br/9612173318358087}{\glsentrydesc{WaldirAlmeida}}},symbol={\blackhref{http://lattes.cnpq.br/9612173318358087}{de Almeida, Waldir}}]{WaldirAlmeida}{Waldir}{Waldir Rodrigues de Almeida}
+\newacronym[first={\href{http://lattes.cnpq.br/0870783723224694}{\glsentrydesc{DanielPazinato}}},symbol={\blackhref{http://lattes.cnpq.br/0870783723224694}{Pazinato, Daniel}}]{DanielPazinato}{Daniel}{Daniel Vatanabe Pazinato}
+\newacronym[first={\href{http://lattes.cnpq.br/9651478878569720}{\glsentrydesc{BernardoStein}}},symbol={\blackhref{http://lattes.cnpq.br/9651478878569720}{Stein, Bernardo}}]{BernardoStein}{Bernardo}{Bernardo Vecchia Stein}
+\newacronym[first={\href{http://lattes.cnpq.br/0692029921953122}{\glsentrydesc{RobertoSouza}}},symbol={\blackhref{http://lattes.cnpq.br/0692029921953122}{de Souza, Roberto}}]{RobertoSouza}{Roberto}{Roberto Medeiros de Souza}
+\newacronym[first={\href{http://lattes.cnpq.br/6434135168928035}{\glsentrydesc{FabioMenezes}}},symbol={\blackhref{http://lattes.cnpq.br/6434135168928035}{Menezes, Fábio}}]{FabioMenezes}{Fábio}{Fábio Hüsemann Menezes}
+\newacronym[first={\href{http://lattes.cnpq.br/0781488945777221}{\glsentrydesc{LinLi}}},symbol={\blackhref{http://lattes.cnpq.br/0781488945777221}{Li, Lin}}]{LinLi}{Lin}{Lin Tzy Li}
+\newacronym[first={\href{https://recodbr.wordpress.com/team/students/}{\glsentrydesc{JavierMunoz}}},symbol={\blackhref{https://recodbr.wordpress.com/team/students/}{Muñoz, Javier}}]{JavierMunoz}{Javier}{Javier Muñoz}
+\newacronym[first={\href{http://lattes.cnpq.br/4495269939725770}{\glsentrydesc{JurandyAlmeida}}},symbol={\blackhref{http://lattes.cnpq.br/4495269939725770}{Almeida, Jurandy}}]{JurandyAlmeida}{Jurandy}{Jurandy Gomes de Almeida Junior}
+\newacronym[first={\href{http://lattes.cnpq.br/3303713473565543}{\glsentrydesc{RodrigoCalumby}}},symbol={\blackhref{http://lattes.cnpq.br/3303713473565543}{Calumby, Rodrigo}}]{RodrigoCalumby}{Rodrigo}{Rodrigo Tripodi Calumby}
+\newacronym[first={\href{http://lattes.cnpq.br/1896476549860669}{\glsentrydesc{IcaroDourado}}},symbol={\blackhref{http://lattes.cnpq.br/1896476549860669}{Dourado, Ícaro}}]{IcaroDourado}{Ícaro}{Ícaro Cavalcante Dourado}
+\newacronym[first={\href{http://lattes.cnpq.br/1907957530680336}{\glsentrydesc{KeillerNogueira}}},symbol={\blackhref{http://lattes.cnpq.br/1907957530680336}{Nogueira, Keiller}}]{KeillerNogueira}{Keiller}{Keiller Nogueira}
+\newacronym[first={\href{http://lattes.cnpq.br/5228991166855582}{\glsentrydesc{LuisPereira}}},symbol={\blackhref{http://lattes.cnpq.br/5228991166855582}{Pereira, Luís}}]{LuisPereira}{Luís}{Luis Augusto Martins Pereira}
+\newacronym[first={\href{http://lattes.cnpq.br/3363615000303340}{\glsentrydesc{DanielPedronette}}},symbol={\blackhref{http://lattes.cnpq.br/3363615000303340}{Pedronette, Daniel}}]{DanielPedronette}{Daniel}{Daniel Carlos Guimarães Pedronette}
+\newacronym[first={\href{http://lattes.cnpq.br/0507994043045945}{\glsentrydesc{GiovaniChiachia}}},symbol={\blackhref{http://lattes.cnpq.br/0507994043045945}{Chiachia, Giovani}}]{GiovaniChiachia}{Giovani}{Giovani Chiachia}
+\newacronym[first={\href{https://www.uccs.edu/cs/about/faculty/terrance-boult}{\glsentrydesc{TerranceBoult}}},symbol={\blackhref{https://www.uccs.edu/cs/about/faculty/terrance-boult}{Boult, Terrance}}]{TerranceBoult}{Terrance}{Terrance Edward Boult}
+\newacronym[first={\href{http://www.ic.unicamp.br/~wainer/}{\glsentrydesc{JacquesWainer}}},symbol={\blackhref{http://www.ic.unicamp.br/~wainer/}{Wainer, Jacques}}]{JacquesWainer}{Jacques}{Jacques Wainer}
+\newacronym[first={\href{https://homepages.dcc.ufmg.br/~jefersson/}{\glsentrydesc{JeferssonSantos}}},symbol={\blackhref{https://homepages.dcc.ufmg.br/~jefersson/}{dos Santos, Jefersson}}]{JeferssonSantos}{Jefersson}{Jefersson Alex dos Santos}
+\newacronym[first={\href{https://www.dcc.ufmg.br/dcc/?q=pt-br/node/226}{\glsentrydesc{MarcosGoncalves}}},symbol={\blackhref{https://www.dcc.ufmg.br/dcc/?q=pt-br/node/226}{Gonçalves, Marcos}}]{MarcosGoncalves}{Marcos}{Marcos André Gonçalves}
 
 % Patent institutions
 \newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
@@ -122,10 +149,6 @@
 % Countries
 \newacronym[first={\glsentrytext{br}}]{br}{Brazil}{??}
 \newacronym[first={\glsentrytext{us}}]{us}{U.S. Patent}{??}
-
-% Me
-\newacronym[first={\glsentrytext{me}}]{me}{\textbf{\authorname{Pedro}{Mendes J{\'u}nior}}}{??}
-\newacronym[first={\glsentrytext{melast}}]{melast}{\textbf{\authorname[]{Pedro}{Mendes J{\'u}nior}}}{??}
 
 % \newcommand\googlefont{Inconsolata} %https://www.w3schools.com/howto/howto_google_fonts.asp
 % \newcommand\googlefont{Work Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
