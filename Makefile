@@ -5,8 +5,9 @@ all: \
 
 makelatex = \
 	for i in $$(seq 1); do \
-		htlatex $(1) "xhtml, mathml, charset=utf-8" " -cunihtf -utf8"; \
+		htlatex $(1) "css, mathml, charset=utf-8" " -cunihtf -utf8"; \
 	done; \
 
-%.html: %.tex common.tex css.tex footer.tex
+%.html: %.tex common.tex css.tex footer.tex \
+		css.cfg Makefile
 	$(call makelatex,$<)

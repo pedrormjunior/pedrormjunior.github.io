@@ -11,6 +11,7 @@
 *.xref
 *.idv
 *.lg
+*.out
 
 template.css
 template.html

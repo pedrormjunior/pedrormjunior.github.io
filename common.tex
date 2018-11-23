@@ -2,19 +2,19 @@
 \documentclass{article}
 \usepackage[utf8x,utf8]{inputenc}
 \usepackage{url}
-\usepackage{hyperref}
+\usepackage[
+colorlinks,
+urlcolor={blue},
+linkcolor={blue},
+]{hyperref}
 \usepackage{enumitem}
 \usepackage{ifthen}
 \usepackage[acronym,nohypertypes={acronym}]{glossaries}
 \usepackage{pifont}
 \usepackage{xr-hyper} %http://compgroups.net/comp.text.tex/using-tex4ht-with-hyperref-xr/1913453
+\usepackage{color}
 
-% http://tex.stackexchange.com/a/245760/37199
-\makeatletter
-\newcommand{\newtabhref}[2]{\bgroup\let~\H@tilde%
-  \Link[#1 target="_blank"]{}{}%
-  {#2}\egroup\EndLink}%
-\makeatother
+\newcommand{\newtabhref}[2]{\href{#1}{#2}}
 
 \newcommand{\blackhref}[3][black]{%
   \href{#2}{\textcolor{#1}{#3}}%
@@ -187,4 +187,3 @@
 % \newcommand\googlefont{Duru Sans} %https://www.w3schools.com/howto/howto_google_fonts.asp
 \newcommand\googlefont{Averia Serif Libre} %https://www.w3schools.com/howto/howto_google_fonts.asp
 % \newcommand\googlefont{Convergence} %https://www.w3schools.com/howto/howto_google_fonts.asp
-\Configure{HTML}{\HCode{<link href="https://fonts.googleapis.com/css?family=\googlefont" rel="stylesheet">\Hnewline}}{\HCode{\Hnewline}}
