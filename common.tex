@@ -19,6 +19,15 @@ linkcolor={blue},
 \usepackage[useregional]{datetime2}
 \newcommand{\formatdate}[3]{\DTMdisplaydate{#1}{#2}{#3}{-1}}
 
+\newenvironment{footenv}{
+  \vspace*{1cm}                 %affects only PDFs
+  \begin{footnotesize}
+  }{
+    {\footnotesize Last updated on\\\today{}}
+  \end{footnotesize}
+}
+\newenvironment{footinfo}{}{}
+
 \newcommand{\newtabhref}[2]{\href{#1}{#2}}
 
 \newcommand{\blackhref}[3][black]{%
