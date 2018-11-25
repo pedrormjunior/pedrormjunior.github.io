@@ -14,6 +14,11 @@ linkcolor={blue},
 \usepackage{xr-hyper} %http://compgroups.net/comp.text.tex/using-tex4ht-with-hyperref-xr/1913453
 \usepackage{color}
 
+% https://tex.stackexchange.com/a/142973
+\usepackage[USenglish]{babel}
+\usepackage[useregional]{datetime2}
+\newcommand{\formatdate}[3]{\DTMdisplaydate{#1}{#2}{#3}{-1}}
+
 \newcommand{\newtabhref}[2]{\href{#1}{#2}}
 
 \newcommand{\blackhref}[3][black]{%
@@ -30,7 +35,6 @@ linkcolor={blue},
 \newcommand{\bibtex}[1]{\ifnotempty{#1}{\newtabhref{https://raw.githubusercontent.com/pedrormjunior/pedrormjunior.github.io/master/#1.bib}{[BibTeX]}}}
 \newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
 \newcommand{\toppublication}{\ding{72}}
-\newcommand{\formatdate}[3]{#2/#3/#1}
 
 % #1: label
 % #2: authors
