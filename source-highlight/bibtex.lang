@@ -1,0 +1,10 @@
+state bibtex = '@[[:alpha:]]+(?=\{)' begin
+	argument = '(?<=\{)[[:alnum:]-]+'
+	normal = "," exit
+end
+
+required = "author|title|journal|booktitle|year|school|institution"
+optional = "volume|number|pages|month|note|address"
+extra = "annote|url|doi|issn"
+
+string = '(?<== (?<!\{))[[:alpha:]]+'

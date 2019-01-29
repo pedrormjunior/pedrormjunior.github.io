@@ -1,0 +1,10 @@
+body { background-color: white; font-weight: bold; }
+
+.argument, .optionalargument { color: red; font-weight: bold; }
+.bibtex { color: darkgreen; font-weight: bold; }
+.string { color: magenta; font-weight: bold; }
+.type { color: blue; font-weight: normal; } /* "and" in authors */
+
+.required { color: blue; font-weight: bold; }
+.optional { color: blue; font-weight: normal; }
+.extra { color: cyan; font-weight: bold; }

@@ -12,6 +12,7 @@
 *.idv
 *.lg
 *.out
+*.bib
 
 template.css
 template.html
