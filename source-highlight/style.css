@@ -9,6 +9,7 @@ body { text-align: justify;
        margin-bottom: 0px;
        line-height: 18px;
        max-width: 650px;
+       background-color: #FFFFC0;
      }
 
 @media screen and ( max-width: 690px ) {
