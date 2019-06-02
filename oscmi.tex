@@ -1,0 +1,44 @@
+% -*- eval: (git-gutter-mode); -*-
+\input{common}
+
+% \externaldocument[index:]{index}
+
+\renewcommand\highlightauthorname[1]{#1}
+
+\title{{Supplementary Material for ``An In-Depth Study on Open-Set Camera Model Identification''}}
+\author{\gls{PedroMendesJunior}\\%
+  \gls{LucaBondi}\\%
+  \gls{PaoloBestagini}\\%
+  \gls{StefanoTubaro}\\%
+  \gls{AndersonRocha}\\%
+}
+\date{Results and data in \ref{ref:MendesJunior2019}}
+
+\begin{document}
+
+\maketitle
+
+% The BibTeX entry for our work is available \hyperref[ref:MendesJunior2019]{below}.
+
+Through the following link, we provide the table of results mentioned in the paper.
+
+\begin{center}
+  \newtabhref{oscmi/oscmi-results.html}{oscmi-results.html}
+\end{center}
+
+Through the following link, we provide the raw results for all combinations of features, classifiers, and training protocol as well as for all metrics (available as a Python dictionary).
+Each key of the dictionary is in the form \textbf{(protocol, classifier, feature, metric)}. The value of each corresponding key represents the accuracy for the corresponding metric.
+
+\begin{center}
+  \newtabhref{oscmi/oscmi-results.dat}{oscmi-results.dat}
+\end{center}
+
+\section*{Reference}
+
+\begin{enumerate}
+\item\MendesJunior{2019}
+\end{enumerate}
+
+\input{footer}
+
+\end{document}
