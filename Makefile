@@ -50,7 +50,7 @@ makelatex = \
 		--remove link7 \
 		--remove link8 \
 		--remove link9 \
-		-c '$$key:"${key}"' \
+		-c '$$key="${key}"' \
 			$< > ${bibfile}
 	@sed -i "s/@inproceedings/@InProceedings/g" ${bibfile}
 	@sed -i "s/@article/@Article/g" ${bibfile}
