@@ -14,6 +14,7 @@ all: \
 	Neira2018.bib.html \
 	Werneck2018.bib.html \
 	MendesJunior2017.bib.html \
+	MendesJunior2019.bib.html \
 
 makelatex = \
 	for i in $$(seq 1); do \
@@ -41,6 +42,7 @@ makelatex = \
 		--remove citedby \
 		--remove timestamp \
 		--remove cites \
+		--remove file \
 		--remove link1 \
 		--remove link2 \
 		--remove link3 \
