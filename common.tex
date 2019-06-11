@@ -41,7 +41,8 @@ linkcolor={blue},
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
-\newcommand{\bibtex}[1]{\ifnotempty{#1}{\href{#1.bib.html}{[BibTeX]}}}
+\newcommand{\speciallink}[2]{\href{#1}{[#2]}}
+\newcommand{\bibtex}[1]{\ifnotempty{#1}{\speciallink{#1.bib.html}{BibTeX}}}
 \newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
 \newcommand{\toppublication}{\ding{72}}
 
