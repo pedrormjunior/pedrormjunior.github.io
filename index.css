@@ -140,6 +140,7 @@ mi + mo.qopname{margin-left:0.3em}
 table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 div.longtable{text-align:center;}
 .supertabular {text-align:center}
+h2.titleHead { line-height: 30px; }
 a:hover, a:visited, a:link, a:active { text-decoration: none; }
 a:visited { color: darkblue; }
 a:link { color: blue; }
