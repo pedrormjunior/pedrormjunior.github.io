@@ -66,8 +66,9 @@ linkcolor={blue},
 % #5: title
 % #6: conference name
 % #7: pages
-% #8: BibTeX
-\newcommand{\proceedings}[8]{\label{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.} \bibtex{#8}}
+% #8: to appear (not empty)
+% #9: BibTeX
+\newcommand{\proceedings}[9]{\label{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', In: \emph{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.}\ifnotempty{#8}{ \textbf{(to appear)}}{} \bibtex{#9}}
 
 % #1: label
 % #2: year
@@ -121,6 +122,7 @@ linkcolor={blue},
 \newacronym{smc}{SMC}{IEEE Intl. Conference on Systems, Man, and Cybernetics}
 \newacronym[first={\glsentrytext{mediaeval2014}}]{mediaeval2014}{MediaEval 2014 Workshop}{??}
 \newacronym[first={\glsentrytext{mediaeval2015}}]{mediaeval2015}{MediaEval 2015 Workshop}{??}
+\newacronym{icip}{ICIP}{IEEE Intl. Conference on Image Processing}
 
 % Institutions
 \newacronym{unicamp}{UNICAMP}{University of Campinas}
@@ -201,6 +203,7 @@ linkcolor={blue},
     {Towards an automatic vehicle access control system: License plate location}
     {smc}
     {2916--2921}
+    {}
     {MendesJunior2011}
   }{}%
   \ifthenelse{\equal{#1}{2019}}{%
