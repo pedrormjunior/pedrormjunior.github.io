@@ -4,6 +4,7 @@ all: \
 	template.html \
 	dataset-VLPL.html \
 	oscmi.html \
+	OSNNet.html \
 	\
 	MendesJunior2011.bib.html \
 	MendesJunior2012.bib.html \
