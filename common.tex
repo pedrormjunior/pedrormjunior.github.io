@@ -101,7 +101,8 @@ linkcolor={blue},
 % #5: arXiv number
 % #6: title
 % #7: journal or conference
-\newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}}}
+% #8: BibTeX
+\newcommand{\arxiv}[8]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}} \bibtex{#8}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
