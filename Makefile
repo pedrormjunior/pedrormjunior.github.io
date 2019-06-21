@@ -16,6 +16,7 @@ all: \
 	Werneck2018.bib.html \
 	MendesJunior2017.bib.html \
 	MendesJunior2019.bib.html \
+	MendesJunior2010.bib.html \
 
 makelatex = \
 	for i in $$(seq 1); do \
