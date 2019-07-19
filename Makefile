@@ -28,7 +28,7 @@ makelatex = \
 		common.cfg Makefile
 	$(call makelatex,$<)
 
-%.bib.html: ${HOME}/Bitbucket/bibliography/pedrormjunior.bib \
+%.bib.html: ${HOME}/Bitbucket/bibliography/pedrormjunior.bib %.bib \
 		source-highlight/* Makefile
 	$(eval bibfile = $(basename $@))
 	$(eval key = $(basename ${bibfile}))
@@ -76,3 +76,4 @@ makelatex = \
 		--css=source-highlight/style.css \
 		-i ${bibfile} \
 		-o $@
+	@sed -i '12i<link href="https://fonts.googleapis.com/css?family=Averia Serif Libre" rel="stylesheet"/>' $@

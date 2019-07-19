@@ -11,7 +11,8 @@ body { text-align: justify;
        max-width: 650px;
        background-color: #FFFFC0;
      }
-
+tt { font-family: "Averia Serif Libre";
+   }
 @media screen and ( max-width: 690px ) {
     body {
 	margin-left: 20px;
