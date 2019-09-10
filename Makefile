@@ -18,6 +18,7 @@ all: \
 	MendesJunior2019.bib.html \
 	MendesJunior2010.bib.html \
 	MendesJunior2019a.bib.html \
+	MendesJunior2019b.bib.html \
 
 makelatex = \
 	for i in $$(seq 1); do \
@@ -28,7 +29,7 @@ makelatex = \
 		common.cfg Makefile
 	$(call makelatex,$<)
 
-%.bib.html: ${HOME}/Bitbucket/bibliography/pedrormjunior.bib %.bib \
+%.bib.html: ${HOME}/Bitbucket/bibliography/pedrormjunior.bib \
 		source-highlight/* Makefile
 	$(eval bibfile = $(basename $@))
 	$(eval key = $(basename ${bibfile}))
