@@ -1,0 +1,32 @@
+% -*- eval: (git-gutter-mode); -*-
+\input{common}
+
+% \externaldocument[index:]{index}
+
+\renewcommand\highlightauthorname[1]{#1}
+
+\title{My GPG public key}
+\author{\gls{PedroMendesJunior}\\%
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+The key is available through the following link.
+
+\begin{center}
+  \newtabhref{GPG_pubkey.asc}{\url{GPG_pubkey.asc}}
+\end{center}
+
+\begin{verbatim}
+pub   rsa4096 2016-05-22 [SC] [expires: 2020-05-09]
+      3EF2B23838B9ED213F9C6551A37ABDFE08392555
+uid           Pedro Ribeiro Mendes Júnior <pedrormjunior@gmail.com>
+sub   rsa4096 2016-05-22 [E] [expires: 2020-05-09]
+\end{verbatim}
+
+\input{footer}
+
+\end{document}
