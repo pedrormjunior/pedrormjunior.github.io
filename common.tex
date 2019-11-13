@@ -191,6 +191,21 @@ linkcolor={blue},
 
 % Proceedings general entries.
 \newcommand\MendesJunior[1]{%
+  \ifthenelse{\equal{#1}{2016}}{%
+    \arxiv{ref:MendesJunior2016a}
+    {
+      \authorsymbol{PedroMendesJunior}
+      \authorsymbol{TerranceBoult}
+      \authorsymbol{JacquesWainer}
+      \authorsymbol[]{AndersonRocha}
+    }
+    {2019}
+    {https://arxiv.org/abs/}
+    {1606.03802}
+    {Specialized Support Vector Machines for open-set recognition}
+    {}
+    {MendesJunior2019a}
+  }{}%
   \ifthenelse{\equal{#1}{2011}}{%
     \proceedings{ref:MendesJunior2011}
     {

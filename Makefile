@@ -6,6 +6,7 @@ all: \
 	oscmi.html \
 	OSNNet.html \
 	GPG_pubkey.html \
+	SSVM-results.html \
 	\
 	MendesJunior2011.bib.html \
 	MendesJunior2012.bib.html \
