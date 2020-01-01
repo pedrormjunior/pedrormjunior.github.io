@@ -1,3 +1,4 @@
+SED=$(shell [ "$$(uname -s)" = "Darwin" ] && echo gsed || echo sed)
 
 all: \
 	index.html \
@@ -35,6 +36,7 @@ makelatex = \
 		source-highlight/* Makefile
 	$(eval bibfile = $(basename $@))
 	$(eval key = $(basename ${bibfile}))
+	@echo Generating $@
 	@bib2bib \
 		-q \
 		--no-comment \
@@ -59,19 +61,20 @@ makelatex = \
 		--remove link8 \
 		--remove link9 \
 		-c '$$key="${key}"' \
-			$< > ${bibfile}
-	@sed -i "s/@inproceedings/@InProceedings/g" ${bibfile}
-	@sed -i "s/@article/@Article/g" ${bibfile}
-	@sed -i "s/@mastersthesis/@MastersThesis/g" ${bibfile}
-	@sed -i "s/@techreport/@TechReport/g" ${bibfile}
-	@sed -i "s/@phdthesis/@PhdThesis/g" ${bibfile}
-	@sed -i "s/á/{\\\\'a}/g" ${bibfile}
-	@sed -i "s/é/{\\\\'e}/g" ${bibfile}
-	@sed -i "s/í/{\\\\'i}/g" ${bibfile}
-	@sed -i "s/ó/{\\\\'o}/g" ${bibfile}
-	@sed -i "s/ú/{\\\\'u}/g" ${bibfile}
-	@sed -i "s/ã/{\\\\~a}/g" ${bibfile}
-	@sed -i "s/ç/{\\\\c{c}}/g" ${bibfile}
+			$< > ${bibfile} \
+			2> /dev/null
+	@${SED} -i "s/@inproceedings/@InProceedings/g" ${bibfile}
+	@${SED} -i "s/@article/@Article/g" ${bibfile}
+	@${SED} -i "s/@mastersthesis/@MastersThesis/g" ${bibfile}
+	@${SED} -i "s/@techreport/@TechReport/g" ${bibfile}
+	@${SED} -i "s/@phdthesis/@PhdThesis/g" ${bibfile}
+	@${SED} -i "s/á/{\\\\'a}/g" ${bibfile}
+	@${SED} -i "s/é/{\\\\'e}/g" ${bibfile}
+	@${SED} -i "s/í/{\\\\'i}/g" ${bibfile}
+	@${SED} -i "s/ó/{\\\\'o}/g" ${bibfile}
+	@${SED} -i "s/ú/{\\\\'u}/g" ${bibfile}
+	@${SED} -i "s/ã/{\\\\~a}/g" ${bibfile}
+	@${SED} -i "s/ç/{\\\\c{c}}/g" ${bibfile}
 	@source-highlight \
 		--quiet \
 		--lang-def=source-highlight/bibtex.lang \
@@ -79,4 +82,4 @@ makelatex = \
 		--css=source-highlight/style.css \
 		-i ${bibfile} \
 		-o $@
-	@sed -i '12i<link href="https://fonts.googleapis.com/css?family=Averia Serif Libre" rel="stylesheet"/>' $@
+	@${SED} -i '12i<link href="https://fonts.googleapis.com/css?family=Averia Serif Libre" rel="stylesheet"/>' $@
