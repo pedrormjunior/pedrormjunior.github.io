@@ -97,12 +97,11 @@ linkcolor={blue},
 % #1: label
 % #2: authors
 % #3: year
-% #4: link prefix
-% #5: arXiv number
-% #6: title
-% #7: journal or conference
-% #8: BibTeX
-\newcommand{\arxiv}[8]{\label{#1} #2 (#3), ``\newtabhref{#4#5}{#6}'', \emph{arXiv:#5}. \ifempty{#7}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#7}\textbf{)}} \bibtex{#8}}
+% #4: arXiv number
+% #5: title
+% #6: journal or conference
+% #7: BibTeX
+\newcommand{\arxiv}[7]{\label{#1} #2 (#3), ``\newtabhref{https://arxiv.org/abs/#4}{#5}'', \emph{arXiv:#4}. \ifempty{#6}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#6}\textbf{)}} \bibtex{#7}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
@@ -200,7 +199,6 @@ linkcolor={blue},
       \authorsymbol[]{AndersonRocha}
     }
     {2019}
-    {https://arxiv.org/abs/}
     {1606.03802}
     {Specialized Support Vector Machines for open-set recognition}
     {}
