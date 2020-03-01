@@ -7,7 +7,6 @@
 .cmmi-10{font-style: italic;}
 .cmsy-5{font-size:50%;}
 .cmsy-7{font-size:70%;}
-.cmbx-10{ font-weight: bold;}
 .cmbsy-10{font-weight: bold;}
 .cmbsy-10{font-weight: bold;}
 .cmbsy-10{font-weight: bold;}
@@ -165,6 +164,5 @@ body { background-color: #FFFFC0; }
 .footenv { line-height: 12px; }
 .footenv { text-align: right; }
 #textcolor1{color:#000000}
-#textcolor2{color:#0000FF}
 /* end css.sty */
 
