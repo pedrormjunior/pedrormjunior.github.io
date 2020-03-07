@@ -22,6 +22,7 @@
 .cmr-17{font-size:170%;}
 .cmr-12{font-size:120%;}
 .cmr-8{font-size:80%;}
+.cmtt-10{font-family: monospace;}
 .cmti-10{ font-style: italic;}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
@@ -142,6 +143,22 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 div.longtable{text-align:center;}
 table.longtable{margin-left:auto; margin-right: auto;}
 .supertabular {text-align:center}
+div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+table.tabular td p{margin-top:0em;}
+table.tabular {margin-left: auto; margin-right: auto;}
+td p:first-child{ margin-top:0em; }
+td p:last-child{ margin-bottom:0em; }
+div.td00{ margin-left:0pt; margin-right:0pt; }
+div.td01{ margin-left:0pt; margin-right:5pt; }
+div.td10{ margin-left:5pt; margin-right:0pt; }
+div.td11{ margin-left:5pt; margin-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+td.td00{ padding-left:0pt; padding-right:0pt; }
+td.td01{ padding-left:0pt; padding-right:5pt; }
+td.td10{ padding-left:5pt; padding-right:0pt; }
+td.td11{ padding-left:5pt; padding-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.hline hr, .cline hr{ height : 1px; margin:0px; }
 h2.titleHead { line-height: 30px; }
 a:hover, a:visited, a:link, a:active { text-decoration: none; }
 a:visited { color: darkblue; }
@@ -164,14 +181,14 @@ body { background-color: #FFFFC0; }
 .footenv { margin-bottom: 10px; }
 .footenv { line-height: 12px; }
 .footenv { text-align: right; }
-#textcolor1{color:#000000}
-#textcolor2{color:#0000FF}
-#textcolor3{color:#000000}
-#textcolor4{color:#0000FF}
-#textcolor5{color:#000000}
-#textcolor6{color:#0000FF}
-#textcolor7{color:#000000}
-#textcolor8{color:#0000FF}
-#textcolor9{color:#000000}
+#textcolor19{color:#000000}
+#textcolor20{color:#0000FF}
+#textcolor21{color:#000000}
+#textcolor22{color:#0000FF}
+#textcolor23{color:#000000}
+#textcolor24{color:#0000FF}
+#textcolor25{color:#000000}
+#textcolor26{color:#0000FF}
+#textcolor27{color:#000000}
 /* end css.sty */
 
