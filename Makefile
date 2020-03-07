@@ -32,7 +32,7 @@ makelatex = \
 		common.cfg Makefile
 	$(call makelatex,$<)
 
-%.bib.html: ${HOME}/Bitbucket/bibliography/pedrormjunior.bib \
+%.bib.html: ${HOME}/dotfiles/bibliography/pedrormjunior.bib \
 		source-highlight/* Makefile
 	$(eval bibfile = $(basename $@))
 	$(eval key = $(basename ${bibfile}))
