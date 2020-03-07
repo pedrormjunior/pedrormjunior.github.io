@@ -181,8 +181,6 @@ body { background-color: #FFFFC0; }
 .footenv { margin-bottom: 10px; }
 .footenv { line-height: 12px; }
 .footenv { text-align: right; }
-#textcolor19{color:#000000}
-#textcolor20{color:#0000FF}
 #textcolor21{color:#000000}
 #textcolor22{color:#0000FF}
 #textcolor23{color:#000000}
@@ -190,5 +188,8 @@ body { background-color: #FFFFC0; }
 #textcolor25{color:#000000}
 #textcolor26{color:#0000FF}
 #textcolor27{color:#000000}
+#textcolor28{color:#0000FF}
+#textcolor29{color:#000000}
+#textcolor30{color:#000000}
 /* end css.sty */
 

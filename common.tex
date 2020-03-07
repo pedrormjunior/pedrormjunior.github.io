@@ -119,14 +119,18 @@ linkcolor={blue},
 \newcommand{\authorref}[2]{\hyperref[#2]{#1~\pub{#2}}}
 
 % Journals
-\newcommand{\definejournal}[2]{\newacronym[first={\glsentrytext{#1}}]{#1}{#2}{??}}
-\definejournal{compbiomed}{Elsevier Computers in Biology and Medicine}
-\definejournal{jbhi}{IEEE Journal of Biomedical and Health Informatics}
-\definejournal{ml}{Springer Machine Learning}
-\definejournal{jmlr}{Journal of Machine Learning Research}
-\definejournal{fgcs}{Elsevier Future Generation Computer Systems}
-\definejournal{a}{IEEE Access}
-\definejournal{ITSS}{IEEE Intelligent Transportation Systems Society}
+\newcommand{\definejournal}[3]{%
+  % #1: journal key
+  % #2: website
+  % #3: journal name
+  \newacronym[first={\glsentrytext{#1}}]{#1}{\blackhref{#2}{#3}}{??}
+}
+\definejournal{compbiomed}{https://www.journals.elsevier.com/computers-in-biology-and-medicine/}{Elsevier Computers in Biology and Medicine}
+\definejournal{jbhi}{https://jbhi.embs.org/}{IEEE Journal of Biomedical and Health Informatics}
+\definejournal{ml}{https://www.springer.com/journal/10994}{Springer Machine Learning}
+\definejournal{fgcs}{https://www.journals.elsevier.com/future-generation-computer-systems/}{Elsevier Future Generation Computer Systems}
+\definejournal{a}{https://ieeeaccess.ieee.org/}{IEEE Access}
+\definejournal{TITS}{https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979}{IEEE Transactions on Intelligent Transportation Systems}
 % Proceedings
 \newacronym{wuwsibgrapi}{SIBGRAPI}{Workshop of Undergraduate Work, Conference on Graphics, Patterns and Image}
 \newacronym{smc}{SMC}{IEEE International Conference on Systems, Man, and Cybernetics}
