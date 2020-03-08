@@ -186,6 +186,8 @@ body { background-color: #FFFFC0; }
 #TBL-10-1-1{width:0.75cm;}
 #TBL-13-1-1{width:0.75cm;}
 #TBL-16-1-1{width:0.75cm;}
+.tags { line-height: 25px; }
+.tags { text-align: left; }
 #textcolor21{color:#000000}
 #textcolor22{color:#0000FF}
 #textcolor23{color:#000000}

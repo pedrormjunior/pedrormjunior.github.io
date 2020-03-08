@@ -58,6 +58,23 @@ linkcolor={blue},
 \newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
 \newcommand{\toppublication}{\ding{72}}
 
+% Tags
+\newenvironment{tags}{}{}
+\newcommand{\definetag}[3]{%
+  % #1: tag key
+  % #2: link
+  % #3: tag
+  \newacronym[first={\glsentrytext{#1}}]{#1}{\newtabhref{#2}{\framebox{#3}}}{??}
+}
+\definetag{Lattes}{http://lattes.cnpq.br/4535492803722330}{CV~(Portuguese)}
+\definetag{GoogleScholar}{https://scholar.google.com/citations?user=22PPnMAAAAAJ}{Google~Scholar}
+\definetag{ResearchGate}{https://www.researchgate.net/profile/Pedro_Junior16}{ResearchGate}
+\definetag{RECODpage}{https://recodbr.wordpress.com/team/students}{\gls{recod}~page}
+\definetag{Github}{https://github.com/pedrormjunior}{Github}
+\definetag{CV}{http://pedrormjunior.github.io/CV.pdf}{CV~(PDF)}
+\definetag{Publons}{https://publons.com/researcher/T-3501-2019/}{Publons}
+\definetag{ORCID}{https://orcid.org/0000-0001-8086-018X}{ORCID}
+
 % #1: label
 % #2: authors
 % #3: year
