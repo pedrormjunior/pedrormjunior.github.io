@@ -50,7 +50,7 @@ td.displaylines {text-align:center; white-space:nowrap;}
 .centerline {text-align:center;}
 .rightline {text-align:right;}
 div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
-.fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.fbox {padding-left:2.0pt; padding-right:2.0pt; text-indent:0pt; border:solid black 1.0pt; }
 div.fbox {display:table}
 div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
 div.minipage{width:100%;}
@@ -61,7 +61,7 @@ div.flushright div {text-align: left;}
 div.flushleft {text-align: left;}
 .underline{ text-decoration:underline; }
 .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
-.framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.framebox-c, .framebox-l, .framebox-r { padding-left:2.0pt; padding-right:2.0pt; text-indent:0pt; border:solid black 1.0pt; }
 .framebox-c {text-align:center;}
 .framebox-l {text-align:left;}
 .framebox-r {text-align:right;}

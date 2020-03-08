@@ -48,10 +48,12 @@ linkcolor={blue},
 }
 
 \setlength\parindent{0pt}
+\setlength\fboxrule{1pt}
+\setlength\fboxsep{2pt}
 
 \newcommand{\ifempty}[3]{\ifthenelse{\equal{#1}{}}{#2}{#3}}
 \newcommand{\ifnotempty}[2]{\ifthenelse{\equal{#1}{}}{}{#2}}
-\newcommand{\speciallink}[2]{\href{#1}{[#2]}}
+\newcommand{\speciallink}[2]{\href{#1}{\fbox{#2}}}
 \newcommand{\bibtex}[1]{\ifnotempty{#1}{\speciallink{#1.bib.html}{BibTeX}}}
 \newcommand{\myurl}[1]{\newtabhref{#1}{#1}}
 \newcommand{\toppublication}{\ding{72}}
