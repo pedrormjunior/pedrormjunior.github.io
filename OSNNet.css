@@ -186,7 +186,10 @@ body { background-color: #FFFFC0; }
 #TBL-13-1-1{width:0.75cm;}
 #TBL-16-1-1{width:0.75cm;}
 .tags { line-height: 25px; }
-.tags { text-align: left; }
+.tags { padding-left: 3%; }
+.tags { float: right; }
+.tags { text-align: right; }
+.tags { max-width: 38.19660112501051%; }
 #textcolor3{color:#000000}
 /* end css.sty */
 
