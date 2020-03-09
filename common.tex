@@ -23,6 +23,7 @@ linkcolor={blue},
 \newcounter{publicationcounter}
 \newcommand{\pubref}[1]{[#1]}
 \newcommand{\pub}[1]{\pubref{\ref{#1}}}
+\newcommand{\pubs}[2]{\pubref{\ref{#1}, \ref{#2}}}
 \newcommand{\pubitem}[1]{\refstepcounter{publicationcounter}\label{#1}\pubref{\thepublicationcounter} & }
 
 \newenvironment{footenv}{
