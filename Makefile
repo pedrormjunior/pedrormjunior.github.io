@@ -60,6 +60,23 @@ makelatex = \
 		--remove link7 \
 		--remove link8 \
 		--remove link9 \
+		--remove eic \
+		--remove isoabbrtitle \
+		--remove abbrjournal \
+		--remove totalcites \
+		--remove journalimpactfactor \
+		--remove impfactorwithoutselfcites \
+		--remove fiveyearimpactfactor \
+		--remove immediacyindex \
+		--remove totalarticles \
+		--remove totalreviews \
+		--remove citedhalflife \
+		--remove citinghalflife \
+		--remove eigenfactorscore \
+		--remove articleinfluencescore \
+		--remove originalresearch \
+		--remove normeigenfactor \
+		--remove avgjifpercentile \
 		-c '$$key="${key}"' \
 			$< > ${bibfile} \
 			2> /dev/null
