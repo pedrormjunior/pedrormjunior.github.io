@@ -100,3 +100,6 @@ makelatex = \
 		-i ${bibfile} \
 		-o $@
 	@${SED} -i '12i<link href="https://fonts.googleapis.com/css?family=Averia Serif Libre" rel="stylesheet"/>' $@
+
+clear:
+	rm -f *.4ct *.4tc *.aux *.dvi *.idv *.lg *.log *.tmp *.xref
