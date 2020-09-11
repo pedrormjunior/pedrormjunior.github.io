@@ -5,6 +5,6 @@ end
 
 required = "author|title|journal|booktitle|year|school|institution"
 optional = "volume|number|pages|month|note|address"
-extra = "annote|url|doi|issn"
+extra = "annote|url|doi|issn|eissn"
 
 string = '(?<== (?<!\{))[[:alpha:]]+'
