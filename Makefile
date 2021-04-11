@@ -8,6 +8,7 @@ all: \
 	OSNNet.html \
 	GPG_pubkey.html \
 	SSVM-results.html \
+	OSSVM-results.html \
 	\
 	MendesJunior2011.bib.html \
 	MendesJunior2012.bib.html \
@@ -20,8 +21,8 @@ all: \
 	MendesJunior2017.bib.html \
 	MendesJunior2019.bib.html \
 	MendesJunior2010.bib.html \
-	MendesJunior2019a.bib.html \
 	MendesJunior2019b.bib.html \
+	MendesJunior2021.bib.html \
 
 makelatex = \
 	for i in $$(seq 1); do \

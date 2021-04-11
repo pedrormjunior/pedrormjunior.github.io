@@ -131,7 +131,7 @@ linkcolor={blue},
 % #5: title
 % #6: journal or conference
 % #7: BibTeX
-\newcommand{\arxiv}[7]{\pubitem{#1} #2 (#3), ``\newtabhref{https://arxiv.org/abs/#4}{#5}'', \emph{arXiv:#4}. \ifempty{#6}{\textbf{(unpublished)}}{\textbf{(submitted to} \glsfirst{#6}\textbf{)}} \bibtex{#7}}
+\newcommand{\arxiv}[7]{\pubitem{#1} #2 (#3), ``\newtabhref{https://arxiv.org/abs/#4}{#5}'', \emph{arXiv:#4}. \ifempty{#6}{\textbf{(unpublished)}}{\textbf{(to appear in} \glsfirst{#6}\textbf{)}} \bibtex{#7}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
@@ -152,6 +152,8 @@ linkcolor={blue},
 \definejournal{a}{https://ieeeaccess.ieee.org/}{IEEE Access}
 \definejournal{TITS}{https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979}{IEEE Transactions on Intelligent Transportation Systems}
 \definejournal{SPL}{https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=97}{IEEE Signal Processing Letters}
+\definejournal{TSMCS}{https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221021}{IEEE Transactions on Systems Man and Cybernetics Systems}
+
 
 % Proceedings
 \newcommand{\defineconference}[4]{%
@@ -248,8 +250,8 @@ linkcolor={blue},
     {2019}
     {1606.03802}
     {Specialized Support Vector Machines for open-set recognition}
-    {}
-    {MendesJunior2019a}
+    {TSMCS}
+    {MendesJunior2021}
   }{}%
   \ifthenelse{\equal{#1}{2011}}{%
     \proceedings{ref:MendesJunior2011}
