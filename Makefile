@@ -8,7 +8,7 @@ all: \
 	OSNNet.html \
 	GPG_pubkey.html \
 	SSVM-results.html \
-	OSSVM-results.html \
+	OSSVM.html \
 	\
 	MendesJunior2011.bib.html \
 	MendesJunior2012.bib.html \
