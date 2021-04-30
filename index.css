@@ -23,7 +23,6 @@
 .cmr-12{font-size:120%;}
 .cmr-8{font-size:80%;}
 .cmtt-10{font-family: monospace,monospace;}
-.cmti-10{ font-style: italic;}
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
 p + p{margin-top:1em;}
@@ -157,6 +156,11 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 .hline hr, .cline hr{ height : 0px; margin:0px; }
 .hline td, .cline td{ padding: 0; }
 .hline hr, .cline hr{border:none;border-top:1px solid black;}
+.uline{ text-decoration:underline; }
+.uuline{ text-decoration:underline; }
+span.sout {text-decoration: line-through }
+span.xout {text-decoration: line-through }
+span.uwave {text-decoration:underline }
 h2.titleHead { line-height: 30px; }
 a:hover, a:visited, a:link, a:active { text-decoration: none; }
 a:visited { color: darkblue; }
