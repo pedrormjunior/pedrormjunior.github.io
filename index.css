@@ -30,6 +30,7 @@ p + div, p + pre {margin-top:1em;}
 div + p, pre + p {margin-top:1em;}
 a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
 @media print {div.crosslinks {visibility:hidden;}}
+table.tabular{border-collapse: collapse; border-spacing: 0;}
 a img { border-top: 0; border-left: 0; border-right: 0; }
 center { margin-top:1em; margin-bottom:1em; }
 td center { margin-top:0em; margin-bottom:0em; }
@@ -38,12 +39,14 @@ math { text-indent: 0em; }
 li p.indent { text-indent: 0em }
 li p:first-child{ margin-top:0em; }
 li p:last-child, li div:last-child { margin-bottom:0.5em; }
+li p:first-child{ margin-bottom:0; }
 li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
 .enumerate1 {list-style-type:decimal;}
 .enumerate2 {list-style-type:lower-alpha;}
 .enumerate3 {list-style-type:lower-roman;}
 .enumerate4 {list-style-type:upper-alpha;}
 div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+div.newtheorem .head{font-weight: bold;}
 .obeylines-h,.obeylines-v {white-space: nowrap; }
 div.obeylines-v p { margin-top:0; margin-bottom:0; }
 .overline{ text-decoration:overline; }
@@ -87,6 +90,7 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 .hline hr, .cline hr{ height : 0px; margin:0px; }
 .hline td, .cline td{ padding: 0; }
 .hline hr, .cline hr{border:none;border-top:1px solid black;}
+.hline {border-top: 1px solid black;}
 .tabbing-right {text-align:right;}
 div.float, div.figure {margin-left: auto; margin-right: auto;}
 div.float img {text-align:center;}
@@ -157,6 +161,7 @@ table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
 .hline hr, .cline hr{ height : 0px; margin:0px; }
 .hline td, .cline td{ padding: 0; }
 .hline hr, .cline hr{border:none;border-top:1px solid black;}
+.hline {border-top: 1px solid black;}
 .uline{ text-decoration:underline; }
 .uuline{ text-decoration:underline; }
 span.sout {text-decoration: line-through }
@@ -194,60 +199,8 @@ body { background-color: #FFFFC0; }
 .tags { float: right; }
 .tags { text-align: right; }
 .tags { max-width: 38.19660112501051%; }
-#textcolor245{color:#000000}
-#textcolor246{color:#0000FF}
-#textcolor247{color:#000000}
-#textcolor248{color:#0000FF}
-#textcolor249{color:#000000}
-#textcolor250{color:#0000FF}
-#textcolor251{color:#000000}
-#textcolor252{color:#0000FF}
-#textcolor253{color:#000000}
-#textcolor254{color:#0000FF}
-#textcolor255{color:#000000}
-#textcolor256{color:#0000FF}
-#textcolor257{color:#000000}
-#textcolor258{color:#0000FF}
-#textcolor259{color:#000000}
-#textcolor260{color:#0000FF}
-#textcolor261{color:#000000}
-#textcolor262{color:#0000FF}
-#textcolor263{color:#000000}
-#textcolor264{color:#0000FF}
-#textcolor265{color:#000000}
-#textcolor266{color:#0000FF}
-#textcolor267{color:#000000}
-#textcolor268{color:#0000FF}
-#textcolor269{color:#000000}
-#textcolor270{color:#0000FF}
-#textcolor271{color:#000000}
-#textcolor272{color:#000000}
-#textcolor273{color:#000000}
-#textcolor274{color:#0000FF}
-#textcolor275{color:#000000}
-#textcolor276{color:#0000FF}
-#textcolor277{color:#000000}
-#textcolor278{color:#0000FF}
-#textcolor279{color:#000000}
-#textcolor280{color:#000000}
-#textcolor281{color:#000000}
-#textcolor282{color:#0000FF}
-#textcolor283{color:#000000}
-#textcolor284{color:#0000FF}
-#textcolor285{color:#000000}
-#textcolor286{color:#0000FF}
-#textcolor287{color:#000000}
-#textcolor288{color:#0000FF}
-#textcolor289{color:#000000}
-#textcolor290{color:#000000}
-#textcolor291{color:#000000}
-#textcolor292{color:#0000FF}
-#textcolor293{color:#000000}
-#textcolor294{color:#0000FF}
-#textcolor295{color:#000000}
-#textcolor296{color:#0000FF}
 #textcolor297{color:#000000}
-#textcolor298{color:#000000}
+#textcolor298{color:#0000FF}
 #textcolor299{color:#000000}
 #textcolor300{color:#0000FF}
 #textcolor301{color:#000000}
@@ -263,7 +216,7 @@ body { background-color: #FFFFC0; }
 #textcolor311{color:#000000}
 #textcolor312{color:#0000FF}
 #textcolor313{color:#000000}
-#textcolor314{color:#000000}
+#textcolor314{color:#0000FF}
 #textcolor315{color:#000000}
 #textcolor316{color:#0000FF}
 #textcolor317{color:#000000}
@@ -271,7 +224,7 @@ body { background-color: #FFFFC0; }
 #textcolor319{color:#000000}
 #textcolor320{color:#0000FF}
 #textcolor321{color:#000000}
-#textcolor322{color:#0000FF}
+#textcolor322{color:#000000}
 #textcolor323{color:#000000}
 #textcolor324{color:#0000FF}
 #textcolor325{color:#000000}
@@ -281,7 +234,7 @@ body { background-color: #FFFFC0; }
 #textcolor329{color:#000000}
 #textcolor330{color:#0000FF}
 #textcolor331{color:#000000}
-#textcolor332{color:#000000}
+#textcolor332{color:#0000FF}
 #textcolor333{color:#000000}
 #textcolor334{color:#0000FF}
 #textcolor335{color:#000000}
@@ -307,7 +260,7 @@ body { background-color: #FFFFC0; }
 #textcolor355{color:#000000}
 #textcolor356{color:#0000FF}
 #textcolor357{color:#000000}
-#textcolor358{color:#0000FF}
+#textcolor358{color:#000000}
 #textcolor359{color:#000000}
 #textcolor360{color:#0000FF}
 #textcolor361{color:#000000}
@@ -315,124 +268,202 @@ body { background-color: #FFFFC0; }
 #textcolor363{color:#000000}
 #textcolor364{color:#0000FF}
 #textcolor365{color:#000000}
-#textcolor366{color:#000000}
-#textcolor499{color:#000000}
-#textcolor500{color:#0000FF}
-#textcolor501{color:#000000}
-#textcolor502{color:#0000FF}
-#textcolor503{color:#000000}
-#textcolor504{color:#0000FF}
-#textcolor505{color:#000000}
-#textcolor506{color:#0000FF}
-#textcolor507{color:#000000}
-#textcolor508{color:#000000}
-#textcolor509{color:#000000}
-#textcolor510{color:#0000FF}
-#textcolor511{color:#000000}
-#textcolor512{color:#0000FF}
-#textcolor513{color:#000000}
-#textcolor514{color:#0000FF}
-#textcolor515{color:#000000}
-#textcolor516{color:#0000FF}
-#textcolor517{color:#000000}
-#textcolor518{color:#0000FF}
-#textcolor519{color:#000000}
-#textcolor520{color:#0000FF}
-#textcolor521{color:#000000}
-#textcolor522{color:#0000FF}
-#textcolor523{color:#000000}
-#textcolor524{color:#0000FF}
-#textcolor525{color:#000000}
-#textcolor526{color:#0000FF}
-#textcolor527{color:#000000}
-#textcolor528{color:#0000FF}
-#textcolor529{color:#000000}
-#textcolor530{color:#0000FF}
-#textcolor531{color:#000000}
-#textcolor532{color:#0000FF}
-#textcolor533{color:#000000}
-#textcolor534{color:#000000}
-#textcolor535{color:#000000}
-#textcolor536{color:#0000FF}
-#textcolor537{color:#000000}
-#textcolor538{color:#0000FF}
-#textcolor539{color:#000000}
-#textcolor540{color:#0000FF}
-#textcolor541{color:#000000}
-#textcolor542{color:#0000FF}
-#textcolor543{color:#000000}
-#textcolor544{color:#0000FF}
-#textcolor545{color:#000000}
-#textcolor546{color:#0000FF}
-#textcolor547{color:#000000}
-#textcolor548{color:#0000FF}
-#textcolor549{color:#000000}
-#textcolor550{color:#000000}
-#textcolor551{color:#000000}
-#textcolor552{color:#0000FF}
-#textcolor553{color:#000000}
-#textcolor554{color:#0000FF}
-#textcolor555{color:#000000}
-#textcolor556{color:#0000FF}
-#textcolor557{color:#000000}
-#textcolor558{color:#000000}
-#textcolor559{color:#000000}
-#textcolor560{color:#0000FF}
-#textcolor561{color:#000000}
-#textcolor562{color:#0000FF}
-#textcolor563{color:#000000}
-#textcolor564{color:#000000}
-#textcolor571{color:#000000}
-#textcolor572{color:#000000}
-#textcolor573{color:#000000}
-#textcolor672{color:#000000}
-#textcolor673{color:#0000FF}
-#textcolor674{color:#000000}
-#textcolor675{color:#0000FF}
-#textcolor676{color:#000000}
-#textcolor677{color:#0000FF}
-#textcolor678{color:#000000}
-#textcolor679{color:#0000FF}
-#textcolor680{color:#000000}
-#textcolor681{color:#0000FF}
-#textcolor682{color:#000000}
-#textcolor683{color:#0000FF}
-#textcolor684{color:#000000}
-#textcolor685{color:#0000FF}
-#textcolor686{color:#000000}
-#textcolor687{color:#0000FF}
-#textcolor688{color:#000000}
-#textcolor689{color:#000000}
-#textcolor690{color:#0000FF}
-#textcolor691{color:#000000}
-#textcolor692{color:#0000FF}
-#textcolor693{color:#000000}
-#textcolor694{color:#0000FF}
-#textcolor695{color:#000000}
-#textcolor696{color:#0000FF}
-#textcolor697{color:#000000}
-#textcolor698{color:#0000FF}
-#textcolor699{color:#000000}
-#textcolor700{color:#0000FF}
-#textcolor701{color:#000000}
-#textcolor702{color:#0000FF}
-#textcolor703{color:#000000}
-#textcolor704{color:#0000FF}
-#textcolor705{color:#000000}
-#textcolor706{color:#000000}
-#textcolor707{color:#0000FF}
-#textcolor708{color:#000000}
-#textcolor709{color:#0000FF}
-#textcolor710{color:#000000}
-#textcolor711{color:#0000FF}
-#textcolor712{color:#000000}
-#textcolor713{color:#0000FF}
-#textcolor714{color:#000000}
-#textcolor715{color:#0000FF}
-#textcolor716{color:#000000}
-#textcolor717{color:#0000FF}
-#textcolor718{color:#000000}
-#textcolor719{color:#0000FF}
-#textcolor720{color:#000000}
+#textcolor366{color:#0000FF}
+#textcolor367{color:#000000}
+#textcolor368{color:#000000}
+#textcolor369{color:#000000}
+#textcolor370{color:#0000FF}
+#textcolor371{color:#000000}
+#textcolor372{color:#0000FF}
+#textcolor373{color:#000000}
+#textcolor374{color:#0000FF}
+#textcolor375{color:#000000}
+#textcolor376{color:#000000}
+#textcolor377{color:#000000}
+#textcolor378{color:#0000FF}
+#textcolor379{color:#000000}
+#textcolor380{color:#0000FF}
+#textcolor381{color:#000000}
+#textcolor382{color:#0000FF}
+#textcolor383{color:#000000}
+#textcolor384{color:#0000FF}
+#textcolor385{color:#000000}
+#textcolor386{color:#0000FF}
+#textcolor387{color:#000000}
+#textcolor388{color:#0000FF}
+#textcolor389{color:#000000}
+#textcolor390{color:#0000FF}
+#textcolor391{color:#000000}
+#textcolor392{color:#000000}
+#textcolor393{color:#000000}
+#textcolor394{color:#0000FF}
+#textcolor395{color:#000000}
+#textcolor396{color:#0000FF}
+#textcolor397{color:#000000}
+#textcolor398{color:#0000FF}
+#textcolor399{color:#000000}
+#textcolor400{color:#0000FF}
+#textcolor401{color:#000000}
+#textcolor402{color:#0000FF}
+#textcolor403{color:#000000}
+#textcolor404{color:#0000FF}
+#textcolor405{color:#000000}
+#textcolor406{color:#0000FF}
+#textcolor407{color:#000000}
+#textcolor408{color:#0000FF}
+#textcolor409{color:#000000}
+#textcolor410{color:#000000}
+#textcolor411{color:#000000}
+#textcolor412{color:#0000FF}
+#textcolor413{color:#000000}
+#textcolor414{color:#0000FF}
+#textcolor415{color:#000000}
+#textcolor416{color:#0000FF}
+#textcolor417{color:#000000}
+#textcolor418{color:#0000FF}
+#textcolor419{color:#000000}
+#textcolor420{color:#0000FF}
+#textcolor421{color:#000000}
+#textcolor422{color:#0000FF}
+#textcolor423{color:#000000}
+#textcolor424{color:#0000FF}
+#textcolor425{color:#000000}
+#textcolor426{color:#0000FF}
+#textcolor427{color:#000000}
+#textcolor428{color:#000000}
+#textcolor429{color:#000000}
+#textcolor430{color:#0000FF}
+#textcolor431{color:#000000}
+#textcolor432{color:#0000FF}
+#textcolor433{color:#000000}
+#textcolor434{color:#0000FF}
+#textcolor435{color:#000000}
+#textcolor436{color:#0000FF}
+#textcolor437{color:#000000}
+#textcolor438{color:#0000FF}
+#textcolor439{color:#000000}
+#textcolor440{color:#0000FF}
+#textcolor441{color:#000000}
+#textcolor442{color:#0000FF}
+#textcolor443{color:#000000}
+#textcolor444{color:#000000}
+#textcolor577{color:#000000}
+#textcolor578{color:#0000FF}
+#textcolor579{color:#000000}
+#textcolor580{color:#0000FF}
+#textcolor581{color:#000000}
+#textcolor582{color:#0000FF}
+#textcolor583{color:#000000}
+#textcolor584{color:#0000FF}
+#textcolor585{color:#000000}
+#textcolor586{color:#000000}
+#textcolor587{color:#000000}
+#textcolor588{color:#0000FF}
+#textcolor589{color:#000000}
+#textcolor590{color:#0000FF}
+#textcolor591{color:#000000}
+#textcolor592{color:#0000FF}
+#textcolor593{color:#000000}
+#textcolor594{color:#0000FF}
+#textcolor595{color:#000000}
+#textcolor596{color:#0000FF}
+#textcolor597{color:#000000}
+#textcolor598{color:#0000FF}
+#textcolor599{color:#000000}
+#textcolor600{color:#0000FF}
+#textcolor601{color:#000000}
+#textcolor602{color:#0000FF}
+#textcolor603{color:#000000}
+#textcolor604{color:#0000FF}
+#textcolor605{color:#000000}
+#textcolor606{color:#0000FF}
+#textcolor607{color:#000000}
+#textcolor608{color:#0000FF}
+#textcolor609{color:#000000}
+#textcolor610{color:#0000FF}
+#textcolor611{color:#000000}
+#textcolor612{color:#000000}
+#textcolor613{color:#000000}
+#textcolor614{color:#0000FF}
+#textcolor615{color:#000000}
+#textcolor616{color:#0000FF}
+#textcolor617{color:#000000}
+#textcolor618{color:#0000FF}
+#textcolor619{color:#000000}
+#textcolor620{color:#0000FF}
+#textcolor621{color:#000000}
+#textcolor622{color:#0000FF}
+#textcolor623{color:#000000}
+#textcolor624{color:#0000FF}
+#textcolor625{color:#000000}
+#textcolor626{color:#0000FF}
+#textcolor627{color:#000000}
+#textcolor628{color:#000000}
+#textcolor629{color:#000000}
+#textcolor630{color:#0000FF}
+#textcolor631{color:#000000}
+#textcolor632{color:#0000FF}
+#textcolor633{color:#000000}
+#textcolor634{color:#0000FF}
+#textcolor635{color:#000000}
+#textcolor636{color:#000000}
+#textcolor637{color:#000000}
+#textcolor638{color:#0000FF}
+#textcolor639{color:#000000}
+#textcolor640{color:#0000FF}
+#textcolor641{color:#000000}
+#textcolor642{color:#000000}
+#textcolor649{color:#000000}
+#textcolor650{color:#000000}
+#textcolor651{color:#000000}
+#textcolor750{color:#000000}
+#textcolor751{color:#0000FF}
+#textcolor752{color:#000000}
+#textcolor753{color:#0000FF}
+#textcolor754{color:#000000}
+#textcolor755{color:#0000FF}
+#textcolor756{color:#000000}
+#textcolor757{color:#0000FF}
+#textcolor758{color:#000000}
+#textcolor759{color:#0000FF}
+#textcolor760{color:#000000}
+#textcolor761{color:#0000FF}
+#textcolor762{color:#000000}
+#textcolor763{color:#0000FF}
+#textcolor764{color:#000000}
+#textcolor765{color:#0000FF}
+#textcolor766{color:#000000}
+#textcolor767{color:#000000}
+#textcolor768{color:#0000FF}
+#textcolor769{color:#000000}
+#textcolor770{color:#0000FF}
+#textcolor771{color:#000000}
+#textcolor772{color:#0000FF}
+#textcolor773{color:#000000}
+#textcolor774{color:#0000FF}
+#textcolor775{color:#000000}
+#textcolor776{color:#0000FF}
+#textcolor777{color:#000000}
+#textcolor778{color:#0000FF}
+#textcolor779{color:#000000}
+#textcolor780{color:#0000FF}
+#textcolor781{color:#000000}
+#textcolor782{color:#0000FF}
+#textcolor783{color:#000000}
+#textcolor784{color:#000000}
+#textcolor785{color:#0000FF}
+#textcolor786{color:#000000}
+#textcolor787{color:#0000FF}
+#textcolor788{color:#000000}
+#textcolor789{color:#0000FF}
+#textcolor790{color:#000000}
+#textcolor791{color:#0000FF}
+#textcolor792{color:#000000}
+#textcolor793{color:#0000FF}
+#textcolor794{color:#000000}
+#textcolor795{color:#0000FF}
+#textcolor796{color:#000000}
+#textcolor797{color:#0000FF}
+#textcolor798{color:#000000}
 /* end css.sty */
 
