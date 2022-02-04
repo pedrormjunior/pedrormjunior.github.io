@@ -28,7 +28,7 @@ all: \
 
 makelatex = \
 	for i in $$(seq 1); do \
-		htlatex $(1) "common, mathml, charset=utf-8" " -cunihtf -utf8"; \
+		make4ht $(1) "common"; \
 	done; \
 
 %.html: %.tex common.tex footer.tex \
