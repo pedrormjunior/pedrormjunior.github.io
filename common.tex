@@ -25,6 +25,7 @@ linkcolor={blue},
 \newcommand{\pubref}[1]{[#1]}
 \newcommand{\pub}[1]{\pubref{\ref{#1}}}
 \newcommand{\pubs}[2]{\pubref{\ref{#1}, \ref{#2}}}
+\newcommand{\pubss}[3]{\pubref{\ref{#1}, \ref{#2}, \ref{#3}}}
 \newcommand{\pubitem}[1]{\refstepcounter{publicationcounter}\label{#1}\pubref{\thepublicationcounter} & }
 
 \newenvironment{footenv}{
@@ -71,7 +72,7 @@ linkcolor={blue},
 \definetag{Lattes}{http://lattes.cnpq.br/4535492803722330}{CV~(Portuguese)}
 \definetag{GoogleScholar}{https://scholar.google.com/citations?user=22PPnMAAAAAJ}{Google~Scholar}
 \definetag{ResearchGate}{https://www.researchgate.net/profile/Pedro_Junior16}{ResearchGate}
-\definetag{RECODpage}{https://recod.ai/post-docs}{\gls{recod}~page}
+\definetag{RECODpage}{https://recod.ai/post-docs}{\glstext{recod}~page}
 \definetag{Github}{https://github.com/pedrormjunior}{Github}
 \definetag{CV}{http://pedrormjunior.github.io/CV.pdf}{CV~(PDF)}
 \definetag{Publons}{https://publons.com/researcher/T-3501-2019/}{Publons}
@@ -179,7 +180,7 @@ linkcolor={blue},
 % Institutions
 \newacronym{unicamp}{UNICAMP}{University of Campinas}
 \newacronym{ic}{IC}{Institute of Computing}
-\newacronym[first={Reasoning for Complex Data (\glsentrytext{recod}) lab}]{recod}{RECOD}{??}
+\newacronym[first={Artificial Intelligence Lab.\@ Recod.ai}]{recod}{Recod.ai}{??}
 \newacronym{ufop}{UFOP}{Universidade Federal de Ouro Preto}
 \newacronym{ufop-en}{UFOP}{Federal University of Ouro Preto}
 \newacronym{uccs}{UCCS}{University of Colorado Colorado Springs}
