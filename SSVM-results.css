@@ -178,7 +178,6 @@ body { margin-right: auto; }
 body { margin-top: 120px; }
 body { margin-bottom: 0px; }
 body { font-family: "Averia Serif Libre"; }
-body { line-height: 18px; }
 body { max-width: 650px; }
 body { background-color: #FFFFC0; }
 @media screen and ( max-width: 690px ) { body { margin-left: 20px; margin-right: 20px; } } 
