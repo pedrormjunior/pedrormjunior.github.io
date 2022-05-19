@@ -22,7 +22,7 @@ all: \
 	MendesJunior2019.bib.html \
 	MendesJunior2010.bib.html \
 	MendesJunior2019b.bib.html \
-	MendesJunior2021.bib.html \
+	MendesJunior2022.bib.html \
 	SorianoVargas2021.bib.html \
 	Werneck2022.bib.html \
 
