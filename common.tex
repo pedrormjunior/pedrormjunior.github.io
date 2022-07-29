@@ -125,8 +125,9 @@ linkcolor={blue},
 % #9: filing date
 % #10: publication date
 % #11: issue date
+% #12: BibTeX
 \newcommand{\patent}[9]{\pubitem{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \textit{\glsfirst{#6}}. #8. Filing date: #9.\patentcontinue}
-\newcommand{\patentcontinue}[2]{\ifnotempty{#1}{ Publication date: #1.}\ifnotempty{#2}{ Issue date: #2.}}
+\newcommand{\patentcontinue}[3]{\ifnotempty{#1}{ Publication date: #1.}\ifnotempty{#2}{ Issue date: #2.} \bibtex{#3}}
 
 % #1: label
 % #2: authors

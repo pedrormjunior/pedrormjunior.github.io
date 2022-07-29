@@ -12,8 +12,11 @@ all: \
 	\
 	MendesJunior2011.bib.html \
 	MendesJunior2012.bib.html \
+	MendesJunior2014.bib.html \
+	MendesJunior2014a.bib.html \
 	MendesJunior2014b.bib.html \
 	MendesJunior2018b.bib.html \
+	Penatti2014.bib.html \
 	Penatti2015.bib.html \
 	Pazinato2016.bib.html \
 	Neira2018.bib.html \
