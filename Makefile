@@ -28,6 +28,8 @@ all: \
 	MendesJunior2022.bib.html \
 	SorianoVargas2021.bib.html \
 	Werneck2022.bib.html \
+	LusquinoFilho2022.bib.html \
+	Goncalvez2022.bib.html \
 
 makelatex = \
 	for i in $$(seq 1); do \
