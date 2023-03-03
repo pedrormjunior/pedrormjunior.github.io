@@ -91,7 +91,7 @@ linkcolor={blue},
 % #8: issue
 % #9: pages
 % #10: BibTeX
-\newcommand{\journal}[9]{\pubitem{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \textit{\glsfirst{#6}}. \ifempty{#7}{\textbf{(\ifempty{#4}{to appear}{online})}}{#7\ifnotempty{#8}{(#8)}:#9.}\journalcontinued}
+\newcommand{\journal}[9]{\pubitem{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \textit{\glsfirst{#6}}. \ifempty{#7}{\textbf{(\ifempty{#4}{to appear}{\ifthenelse{\equal{#7}{??}}{}{online}})}}{\ifthenelse{\equal{#7}{??}}{\textbf{(under review)}}{#7\ifnotempty{#8}{(#8)}:#9.}}\journalcontinued}
 \newcommand{\journalcontinued}[1]{ \bibtex{#1}}
 
 % #1: label
@@ -160,6 +160,7 @@ linkcolor={blue},
 \definejournal{SPL}{https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=97}{IEEE Signal Processing Letters}
 \definejournal{TSMCS}{https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221021}{IEEE Transactions on Systems, Man, and Cybernetics: Systems}
 \definejournal{JPSE}{https://www.sciencedirect.com/journal/journal-of-petroleum-science-and-engineering}{Journal of Petroleum Science and Engineering}
+\definejournal{SR}{https://doi.org/10.21203/rs.3.rs-2566176/v1}{Scientific Reports}
 
 
 % Proceedings
@@ -251,6 +252,7 @@ linkcolor={blue},
 \newauthor{EduardoPereira}{https://orcid.org/0000-0002-1564-2933}{Eduardo}{Eduardo dos Santos Pereira}{Pereira, Eduardo dos Santos}
 \newauthor{VitorFerreira}{https://scholar.google.com/citations?user=LlXcmgUAAAAJ}{Vitor}{Vitor Hugo de Sousa Ferreira}{Ferreira, Vitor Hugo de Sousa}
 \newauthor{SoroorSalavati}{https://scholar.google.com/citations?user=IQM1O-MAAAAJ}{Soroor}{Soroor Salavati}{Salavati, Soroor}
+\newauthor{OscarLinares}{http://lattes.cnpq.br/8626698776328770}{Óscar}{Óscar Alonso Cuadros Linares}{Linares, Óscar}
 
 % Patent institutions
 \newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
