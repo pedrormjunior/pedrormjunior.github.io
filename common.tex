@@ -182,15 +182,16 @@ linkcolor={blue},
 \defineconference{rog2022}{https://www.riooilgas.com.br/en/}{Rio Oil and Gas Expo and Conference}{??}
 
 % Institutions
-\newacronym{unicamp}{UNICAMP}{University of Campinas}
-\newacronym{ic}{IC}{Institute of Computing}
-\newacronym[first={Artificial Intelligence Lab.\@ Recod.ai}]{recod}{Recod.ai}{??}
-\newacronym{ufop}{UFOP}{Universidade Federal de Ouro Preto}
-\newacronym{ufop-en}{UFOP}{Federal University of Ouro Preto}
-\newacronym{uccs}{UCCS}{University of Colorado Colorado Springs}
-\newacronym[first={\glsentrytext{polimi} (\glsentrydesc{polimi})}]{polimi}{Politecnico di Milano}{Polimi}
-\newacronym{deib}{DEIB}{Dipartimento di Elettronica, Informazione e Bioingegneria}
-\newacronym{ispg}{ISPG}{Image and Sound Processing Group}
+\newcommand{\defineinstitution}[4][]{\newacronym[#1]{#2}{#3}{#4}}
+\defineinstitution{unicamp}{UNICAMP}{University of Campinas}
+\defineinstitution{ic}{IC}{Institute of Computing}
+\defineinstitution[first={Artificial Intelligence Lab.\@ Recod.ai}]{recod}{Recod.ai}{??}
+\defineinstitution{ufop}{UFOP}{Universidade Federal de Ouro Preto}
+\defineinstitution{ufop-en}{UFOP}{Federal University of Ouro Preto}
+\defineinstitution{uccs}{UCCS}{University of Colorado Colorado Springs}
+\defineinstitution[first={\glsentrytext{polimi} (\glsentrydesc{polimi})}]{polimi}{Politecnico di Milano}{Polimi}
+\defineinstitution{deib}{DEIB}{Dipartimento di Elettronica, Informazione e Bioingegneria}
+\defineinstitution{ispg}{ISPG}{Image and Sound Processing Group}
 
 % People
 % \glsfirst: full name with hyperlink
@@ -254,8 +255,8 @@ linkcolor={blue},
 \newauthor{OscarLinares}{http://lattes.cnpq.br/8626698776328770}{Óscar}{Óscar Alonso Cuadros Linares}{Linares, Óscar}
 
 % Patent institutions
-\newacronym{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
-\newacronym{uspto}{USPTO}{United States Patent and Trademark Office}
+\defineinstitution{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
+\defineinstitution{uspto}{USPTO}{United States Patent and Trademark Office}
 
 % Countries
 \newacronym[first={\glsentrytext{br}}]{br}{Brazil}{??}
