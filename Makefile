@@ -31,6 +31,7 @@ all: \
 	LusquinoFilho2022.bib.html \
 	Goncalvez2022.bib.html \
 	Castro2023.bib.html \
+	Ferreira2023.bib.html \
 
 makelatex = \
 	for i in $$(seq 1); do \
