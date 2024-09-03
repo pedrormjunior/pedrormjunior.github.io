@@ -27,7 +27,7 @@ linkcolor={blue},
 \newcommand{\pubs}[2]{\pubref{\ref{#1}, \ref{#2}}}
 \newcommand{\pubss}[3]{\pubref{\ref{#1}, \ref{#2}, \ref{#3}}}
 \newcommand{\pubssss}[5]{\pubref{\ref{#1}, \ref{#2}, \ref{#3}, \ref{#4}, \ref{#5}}}
-\newcommand{\pubsssss}[6]{\pubref{\ref{#1}, \ref{#2}, \ref{#3}, \ref{#4}, \ref{#5}, \ref{#6}}}
+\newcommand{\pubssssss}[7]{\pubref{\ref{#1}, \ref{#2}, \ref{#3}, \ref{#4}, \ref{#5}, \ref{#6}, \ref{#7}}}
 \newcommand{\pubitem}[1]{\refstepcounter{publicationcounter}\label{#1}\pubref{\thepublicationcounter} & }
 
 \newenvironment{footenv}{
@@ -82,7 +82,7 @@ linkcolor={blue},
 \definetag{RECODpage}{https://recod.ai/equipe/pedro-ribeiro-mendes-junior/}{\glstext{recod}~page}
 \definetag{Github}{https://github.com/pedrormjunior}{Github}
 \definetag{CV}{http://pedrormjunior.github.io/CV.pdf}{CV~(PDF)}
-\definetag{Publons}{https://publons.com/researcher/T-3501-2019/}{Publons}
+\definetag{ResearcherID}{https://www.webofscience.com/wos/author/record/T-3501-2019}{ResearcherID}
 \definetag{ORCID}{https://orcid.org/0000-0001-8086-018X}{ORCID}
 \definetag{LinkedIn}{https://www.linkedin.com/in/pedrormjunior}{LinkedIn}
 
@@ -96,7 +96,7 @@ linkcolor={blue},
 % #8: issue
 % #9: pages
 % #10: BibTeX
-\newcommand{\journal}[9]{\pubitem{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \textit{\glsfirst{#6}}. \ifempty{#7}{\textbf{(\ifempty{#4}{to appear}{\ifthenelse{\equal{#7}{??}}{}{online}})}}{\ifthenelse{\equal{#7}{??}}{\textbf{(under review)}}{#7\ifnotempty{#8}{(#8)}:#9.}}\journalcontinued}
+\newcommand{\journal}[9]{\pubitem{#1} #2 (#3), \ifempty{#4}{``\textcolor{blue}{#5}''}{\newtabhref{#4}{``#5''}}, \textit{\glsfirst{#6}}. \ifempty{#7}{\textbf{(\ifempty{#4}{to appear}{\ifthenelse{\equal{#7}{??}}{}{online}})}}{\ifthenelse{\equal{#7}{??}}{\textbf{(under review)}}{#7\ifnotempty{#8}{(#8)}:#9.}}\journalcontinued}
 \newcommand{\journalcontinued}[1]{ \bibtex{#1}}
 
 % #1: label
@@ -108,7 +108,7 @@ linkcolor={blue},
 % #7: pages
 % #8: to appear (not empty)
 % #9: BibTeX
-\newcommand{\proceedings}[9]{\pubitem{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', In: \textit{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.}\ifnotempty{#8}{ \textbf{(to appear)}}{} \bibtex{#9}}
+\newcommand{\proceedings}[9]{\pubitem{#1} #2 (#3), \ifempty{#4}{``\textcolor{blue}{#5}''}{\newtabhref{#4}{``#5''}}, In: \textit{\glsfirst{#6}}.\ifnotempty{#7}{ pp. #7.}\ifnotempty{#8}{ \textbf{(to appear)}}{} \bibtex{#9}}
 
 % #1: label
 % #2: year
@@ -118,7 +118,7 @@ linkcolor={blue},
 % #6: type
 % #7: BibTeX
 % #8: in Portuguese
-\newcommand{\thesis}[8]{\pubitem{#1} \authorsymbol[]{PedroMendesJunior} (#2), ``\ifempty{#3}{\textcolor{blue}{#4}}{\newtabhref{#3}{#4}}'' ({#6}\ifnotempty{#8}{; in Portuguese}), \textit{\glsfirst{#5}}. \bibtex{#7}}
+\newcommand{\thesis}[8]{\pubitem{#1} \authorsymbol[]{PedroMendesJunior} (#2), \ifempty{#3}{``\textcolor{blue}{#4}''}{\newtabhref{#3}{``#4''}} ({#6}\ifnotempty{#8}{; in Portuguese}), \textit{\glsfirst{#5}}. \bibtex{#7}}
 
 % #1: label
 % #2: authors
@@ -132,7 +132,7 @@ linkcolor={blue},
 % #10: publication date
 % #11: issue date
 % #12: BibTeX
-\newcommand{\patent}[9]{\pubitem{#1} #2 (#3), ``\ifempty{#4}{\textcolor{blue}{#5}}{\newtabhref{#4}{#5}}'', \textit{\glsfirst{#6}}. #8. Filing date: #9.\patentcontinue}
+\newcommand{\patent}[9]{\pubitem{#1} #2 (#3), \ifempty{#4}{``\textcolor{blue}{#5}''}{\newtabhref{#4}{``#5''}}, \textit{\glsfirst{#6}}. #8. Filing date: #9.\patentcontinue}
 \newcommand{\patentcontinue}[3]{\ifnotempty{#1}{ Publication date: #1.}\ifnotempty{#2}{ Issue date: #2.} \bibtex{#3}}
 
 % #1: label
@@ -142,7 +142,7 @@ linkcolor={blue},
 % #5: title
 % #6: journal or conference
 % #7: BibTeX
-\newcommand{\arxiv}[7]{\pubitem{#1} #2 (#3), ``\newtabhref{https://arxiv.org/abs/#4}{#5}'', \textit{arXiv:#4}. \ifempty{#6}{\textbf{(unpublished)}}{\textbf{(to appear in} \glsfirst{#6}\textbf{)}} \bibtex{#7}}
+\newcommand{\arxiv}[7]{\pubitem{#1} #2 (#3), \newtabhref{https://arxiv.org/abs/#4}{``#5''}, \textit{arXiv:#4}. \ifempty{#6}{\textbf{(unpublished)}}{\textbf{(to appear in} \glsfirst{#6}\textbf{)}} \bibtex{#7}}
 
 \newcommand{\sepauthor}{\textcolor{blue}{\bf;}}
 \newcommand{\authorname}[3][\sepauthor{}]{#3, #2#1}
@@ -204,6 +204,7 @@ linkcolor={blue},
 \defineconference{icip2019}{http://www.2019.ieeeicip.org/}{ICIP}{IEEE International Conference on Image Processing}
 \defineconference{rog2022}{https://www.riooilgas.com.br/en/}{Rio Oil and Gas Expo and Conference}{??}
 \defineconference{otc2023}{https://2023.otcnet.org/}{OTC Offshore Technology Conference}{??}
+\defineconference{eece2024}{https://www.spe-events.org/europeenergyconference}{SPE Europe Energy Conference and Exhibition}{??}
 
 % Institutions
 \newcommand{\defineinstitution}[4][]{%
@@ -292,6 +293,11 @@ linkcolor={blue},
 \newauthor{VitorFerreira}{https://scholar.google.com/citations?user=LlXcmgUAAAAJ}{Vitor}{Vitor Hugo de Sousa Ferreira}{Ferreira, Vitor Hugo de Sousa}
 \newauthor{SoroorSalavati}{https://scholar.google.com/citations?user=IQM1O-MAAAAJ}{Soroor}{Soroor Salavati}{Salavati, Soroor}
 \newauthor{OscarLinares}{http://lattes.cnpq.br/8626698776328770}{Óscar}{Óscar Alonso Cuadros Linares}{Linares, Óscar}
+\newauthor{AugustoLustosaFilho}{https://www.ic.unicamp.br/~jaugusto}{Augusto}{José Augusto Saraiva Lustosa Filho}{Lustosa Filho, Augusto}
+\newauthor{AshishLoomba}{http://lattes.cnpq.br/2685832574781110}{Ashish}{Ashish Kumar Loomba}{Loomba, Ashish}
+\newauthor{AhmedEsmin}{http://lattes.cnpq.br/1079631597376772}{Ahmed}{Ahmed Ali Abdalla Esmin}{Esmin, Ahmed}
+\newauthor{ElayneMorais}{http://lattes.cnpq.br/8319716633644801}{Elayne}{Elayne Cristina Cardoso de Morais}{de Morais, Elayne}
+\newauthor{MuriloAmaral}{http://lattes.cnpq.br/4754821844867329}{Murilo}{Murilo Garcia de Matos Amaral}{Amaral, Murilo}
 
 % Patent institutions
 \defineinstitution{inpi}{INPI}{Instituto Nacional da Propriedade Industrial}
