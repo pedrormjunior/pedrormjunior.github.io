@@ -36,14 +36,9 @@ all: \
 	LusquinoFilho2024.bib.html \
 	MendesJunior2024.bib.html \
 
-makelatex = \
-	for i in $$(seq 1); do \
-		make4ht $(1) "common"; \
-	done; \
-
 %.html: %.tex common.tex footer.tex \
 		common.cfg Makefile
-	$(call makelatex,$<)
+	@make4ht $< "common"
 
 %.bib.html: ${HOME}/dotfiles/bibliography/pedrormjunior.bib \
 		source-highlight/* Makefile
