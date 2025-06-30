@@ -216,6 +216,7 @@ body { background-color: #FFFFC0; }
 #TBL-10-1-1{width:0.87cm;}
 #TBL-13-1-1{width:0.87cm;}
 #TBL-16-1-1{width:0.87cm;}
+#verbatim-1 { font-size: 16px; }
 .tags { line-height: 25px; }
 .tags { padding-left: 3%; }
 .tags { float: right; }
