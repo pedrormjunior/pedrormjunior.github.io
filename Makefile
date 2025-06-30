@@ -35,6 +35,7 @@ all: \
 	Werneck2024.bib.html \
 	LusquinoFilho2024.bib.html \
 	MendesJunior2024.bib.html \
+	Salavati2025.bib.html \
 
 %.html: %.tex common.tex footer.tex \
 		common.cfg Makefile
